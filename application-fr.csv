@@ -45,7 +45,6 @@ PostgreSQL;Base de données;Base de données relationnelle puissante et open-sou
 Scheduled Trigger;Automatisation;Déclenche un scénario à une heure ou fréquence donnée. Utile pour les routines régulières (ex: tous les lundis).;https://fr.wikipedia.org/wiki/Cron  
 JavaScript;Développement;Langage de programmation web incontournable. Utilisé pour créer des interactions dynamiques dans les pages web.;https://developer.mozilla.org/en-US/docs/Web/JavaScript  
 WordPress;Création de site;CMS le plus populaire pour créer des blogs et sites vitrines. Large écosystème de plugins et thèmes.;https://wordpress.org  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Kommo;CRM;CRM simple axé sur les interactions via messagerie (WhatsApp, Telegram, Instagram). Met l'accent sur la communication directe et la conversion rapide.;https://kommo.com  
 Data Storage;Automatisation;Composant utilisé dans les plateformes comme Albato pour stocker temporairement des données entre deux actions dans un scénario d'automatisation.;N/A (Data Storage = composant technique Albato)  
 RSS Reader;Veille & Agrégation;Permet de suivre les flux RSS de différents sites pour centraliser l'information. Idéal pour la veille concurrentielle ou technologique.;N/A (RSS Reader = composant générique)  
@@ -89,7 +88,6 @@ SMSPilot;SMS;Service économique d’envoi de SMS internationaux. Souvent utilis
 LeadForms;Formulaires & Leads;Créateur de formulaires optimisés pour la conversion. Intègre analytics, A/B testing, CRM.;https://leadforms.io  
 TELESTORE;Téléphonie;Fournisseur de services télécom avec intégration pour suivi d’appels. Utilisé en call tracking ou relation client.;https://telestore.ru  
 Asana;Gestion de projet;Outil de gestion de projets et de tâches pour équipes. Interface flexible avec calendriers, timelines, dépendances.;https://asana.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Slack;Communication & Collaboration;Messagerie d’équipe en temps réel, avec canaux, fichiers partagés et intégrations. Très utilisé en entreprise pour fluidifier la communication.;https://slack.com  
 Formdesigner;Formulaires;Outil pour créer des formulaires personnalisés avec logique conditionnelle. Idéal pour les enquêtes, inscriptions, feedbacks.;https://formdesigner.ru  
 SE Ranking;SEO & Analytics;Plateforme SEO tout-en-un : suivi de positions, audit technique, analyse concurrentielle, recherche de mots-clés.;https://seranking.com  
@@ -135,7 +133,6 @@ Agiled;ERP & Gestion d’entreprise;Suite tout-en-un pour gérer projets, financ
 Rasa.io;Newsletters IA;Solution de newsletters automatisées et personnalisées grâce à l’intelligence artificielle.;https://www.rasa.io  
 Useinbox;Emailing;Plateforme d’envoi d’emails en masse avec automatisation, segmentation et rapports.;https://useinbox.com  
 ClickUp;Gestion de projet;Outil tout-en-un combinant tâches, docs, chat et dashboards, très apprécié pour sa flexibilité.;https://clickup.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Clearout;Emailing & Vérification;Outil de vérification d’adresses e-mail pour améliorer la délivrabilité et nettoyer les listes de contacts.;https://clearout.io  
 Acadle;Formation & LMS;Plateforme LMS pour créer des académies en ligne et former des employés, clients ou partenaires.;https://acadle.com  
 Google Drive;Stockage cloud;Service de stockage et partage de fichiers en ligne, intégré à Google Workspace.;https://drive.google.com  
@@ -184,7 +181,6 @@ Thrivecart;E-commerce & Paiement;Plateforme pour vendre produits digitaux, gére
 BotHunter;Automatisation & Bots;Outil pour automatiser des interactions et générer des leads via messageries.;https://bothunter.io  
 Upcoach;Coaching & Formation;Plateforme pour coachs et formateurs, combinant gestion de programmes et communauté.;https://upcoach.com  
 MailerLite;Emailing;Outil d’email marketing simple avec automation, landing pages et éditeur drag-and-drop.;https://www.mailerlite.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Better Stack;Monitoring & Alerting;Plateforme pour surveiller la disponibilité des services web, envoyer des alertes et visualiser des logs.;https://betterstack.com  
 Cloudflare;Sécurité & Performance web;Réseau de diffusion de contenu (CDN), sécurité DDoS et optimisation des sites web pour améliorer performance et disponibilité.;https://www.cloudflare.com  
 Notion;Productivité & Collaboration;Outil tout-en-un combinant notes, bases de données, wikis et gestion de projets.;https://www.notion.so  
@@ -230,7 +226,6 @@ Yelp;Réseaux sociaux & Avis;Plateforme pour consulter et publier des avis sur d
 Time Doctor;Suivi du temps;Outil de time-tracking avancé avec capture d’écran, utile pour le télétravail et les freelances.;https://www.timedoctor.com  
 Discord;Communauté & Communication;Plateforme de chat vocal et texte, utilisée par les communautés et les équipes de travail.;https://discord.com  
 Certopus;Certification & Diplômes;Outil pour créer, distribuer et vérifier des certificats numériques.;https://certopus.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Facebook Group;Réseaux sociaux & Communautés;Espace communautaire au sein de Facebook pour échanger autour de centres d’intérêt, organiser des événements et partager du contenu.;https://www.facebook.com/groups  
 Patreon;Monétisation de communauté;Plateforme pour les créateurs permettant d’obtenir un revenu récurrent de leurs fans via abonnements.;https://www.patreon.com  
 Medium;Création de contenu;Plateforme de publication d’articles et de blogs, axée sur la qualité éditoriale et la visibilité.;https://medium.com  
@@ -274,7 +269,6 @@ FreshBooks;Comptabilité;Logiciel cloud de facturation et comptabilité pour fre
 Marketing Master IO;Marketing automation;Outil d’automatisation marketing multicanal (Messenger, SMS, e-mail) avec CRM intégré.;https://marketingmaster.io  
 Sage Accounting;Comptabilité;Solution de gestion comptable et financière pour PME.;https://www.sage.com  
 Nexweave;Personnalisation marketing;Plateforme pour créer des contenus dynamiques personnalisés (images, vidéos, pages web).;https://nexweave.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 Brevo;Emailing & Marketing;Anciennement Sendinblue, plateforme d’emailing, SMS, automation et CRM pour petites et moyennes entreprises.;https://www.brevo.com  
 Flexbe;Création de site;Outil pour créer des landing pages et sites web orientés conversion, avec éditeur drag-and-drop.;https://flexbe.com  
 Doran;Marketing automation;Plateforme de campagnes marketing multicanal, incluant email, SMS, réseaux sociaux et notifications push.;https://doran.app  
@@ -317,7 +311,6 @@ Tawk.to;Support client & Chat;Chat en direct gratuit pour sites web, avec suivi 
 Switchboard Canvas;Personnalisation d’images;Outil API pour générer automatiquement des images marketing personnalisées.;https://switchboard.ai  
 Gemini AI;IA & Générative;Modèle d’intelligence artificielle de Google, concurrent de ChatGPT, pour génération de texte et images.;https://deepmind.google/technologies/gemini  
 Flotiq;Headless CMS;CMS flexible et API-first pour gérer et distribuer des contenus.;https://flotiq.com  
-Nom;Catégorie;Description;N/A (Nom générique)  
 AITable;IA & Bases de données;Outil combinant IA et base de données collaborative pour analyser, enrichir et automatiser les données.;https://aitable.ai  
 AltText.ai;IA & Accessibilité;Générateur d’alternatives textuelles pour images, afin d’améliorer l’accessibilité et le SEO.;https://alttext.ai  
 Google Slides;Productivité;Application de présentation en ligne collaborative, intégrée à Google Workspace.;https://slides.google.com  

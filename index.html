@@ -142,6 +142,12 @@ const translations = {
     }
 };
 
+const csvFiles = {
+    fr: 'application-fr.csv',
+    en: 'application-en.csv',
+    es: 'application-es.csv'
+};
+
 document.getElementById('languageSelect').addEventListener('change', function() {
     const lang = this.value;
     document.querySelector('h1').textContent = translations[lang].title;
@@ -152,7 +158,23 @@ document.getElementById('languageSelect').addEventListener('change', function() 
     document.querySelector('th:nth-child(2)').textContent = translations[lang].category;
     document.querySelector('th:nth-child(3)').textContent = translations[lang].description;
     document.querySelector('th:nth-child(4)').textContent = translations[lang].link;
+
+    // Recharger le CSV correspondant à la langue
+    fetch(csvFiles[lang])
+        .then(response => response.text())
+        .then(csvText => {
+            Papa.parse(csvText, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function (results) {
+                    allData = results.data;
+                    renderTable(allData);
+                    generateCategorySelect(allData);
+                }
+            });
+        });
 });
+
 
 
 </script>
