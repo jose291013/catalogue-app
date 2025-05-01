@@ -11,6 +11,12 @@
 <body>
 <div class="container my-5">
     <h1 class="mb-4">Catalogue des Applications</h1>
+    <select id="languageSelect" class="form-select mb-3" style="max-width: 200px;">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+    
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Rechercher une application...">
     
     
@@ -100,6 +106,53 @@ function generateCategorySelect(data) {
         renderTable(filtered);
     });
 }
+const translations = {
+    fr: {
+        title: 'Catalogue des Applications',
+        search: 'Rechercher une application...',
+        allCategories: 'Toutes les catégories',
+        clearData: 'Effacer les données enregistrées',
+        name: 'Nom',
+        category: 'Catégorie',
+        description: 'Description',
+        link: 'Lien',
+        loading: 'Chargement des données...'
+    },
+    en: {
+        title: 'Application Catalog',
+        search: 'Search an application...',
+        allCategories: 'All categories',
+        clearData: 'Clear saved data',
+        name: 'Name',
+        category: 'Category',
+        description: 'Description',
+        link: 'Link',
+        loading: 'Loading data...'
+    },
+    es: {
+        title: 'Catálogo de Aplicaciones',
+        search: 'Buscar una aplicación...',
+        allCategories: 'Todas las categorías',
+        clearData: 'Borrar datos guardados',
+        name: 'Nombre',
+        category: 'Categoría',
+        description: 'Descripción',
+        link: 'Enlace',
+        loading: 'Cargando datos...'
+    }
+};
+
+document.getElementById('languageSelect').addEventListener('change', function() {
+    const lang = this.value;
+    document.querySelector('h1').textContent = translations[lang].title;
+    document.getElementById('searchInput').placeholder = translations[lang].search;
+    document.querySelector('#categorySelect option[value="all"]').textContent = translations[lang].allCategories;
+    document.getElementById('noDataMessage').textContent = translations[lang].loading;
+    document.querySelector('th:nth-child(1)').textContent = translations[lang].name;
+    document.querySelector('th:nth-child(2)').textContent = translations[lang].category;
+    document.querySelector('th:nth-child(3)').textContent = translations[lang].description;
+    document.querySelector('th:nth-child(4)').textContent = translations[lang].link;
+});
 
 
 </script>
