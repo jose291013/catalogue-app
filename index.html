@@ -13,7 +13,7 @@
     <h1 class="mb-4">Catalogue des Applications</h1>
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Rechercher une application...">
     
-    <button id="clearData" class="btn btn-danger btn-sm mb-3">Effacer les données enregistrées</button>
+    
     <select id="categorySelect" class="form-select mb-3">
         <option value="all">Toutes les catégories</option>
     </select>
@@ -69,13 +69,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
     renderTable(filtered);
 });
 
-document.getElementById('clearData').addEventListener('click', function () {
-    localStorage.removeItem('appData');
-    allData = [];
-    renderTable([]);
-    generateCategoryButtons([]);
-    document.getElementById('noDataMessage').style.display = 'block';
-});
+
 
 function renderTable(data) {
     const tbody = document.getElementById('appTableBody');
