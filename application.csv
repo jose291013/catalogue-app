@@ -1,0 +1,354 @@
+﻿Nom;Catégorie;Description;Lien
+Bitrix24;CRM & Gestion d'entreprise;Plateforme tout-en-un incluant CRM, gestion de projet, communication interne. Permet de gérer ventes, tâches et collaboration dans une seule interface.;https://www.bitrix24.com  
+FreshOffice;CRM & Gestion d'entreprise;Outil de gestion intégré avec CRM, comptabilité, marketing et support client. Idéal pour centraliser les opérations d'une PME.;https://freshoffice.ru  
+JivoChat (JivoSite);Support client & Chat en ligne;Chat multicanal intégré (site web, WhatsApp, Facebook Messenger, etc.). Permet aux entreprises de répondre en temps réel à leurs clients.;https://www.jivochat.com  
+Creatio (BpmOnline);CRM & Automatisation;CRM avec moteur BPM low-code. Idéal pour automatiser les ventes, le marketing et le service client.;https://www.creatio.com  
+InSales;E-commerce;Plateforme SaaS pour créer une boutique en ligne. Gère produits, paiements, expéditions et canaux multiventes.;https://www.insales.ru  
+amoCRM;CRM & Vente;CRM orienté messagerie (WhatsApp, Facebook, Email). Simplifie le suivi des prospects par pipeline de vente.;https://www.amocrm.com  
+Albato Telegram bot;Automatisation & Notification;Permet d’envoyer/recevoir des messages Telegram via Albato. Utilisé dans les workflows automatisés.;https://albato.com  
+Google Sheets;Bureautique & Collaboration;Feuilles de calcul en ligne collaboratives. Idéal pour l’analyse de données et la gestion de tableaux partagés.;https://www.google.com/sheets  
+Facebook;Réseaux sociaux;Réseau social pour la communication, la publicité ciblée et la gestion de pages d’entreprise.;https://www.facebook.com  
+Kissmetrics;Analytics & Suivi utilisateurs;Analyse le comportement utilisateur pour optimiser la conversion. Utilisé pour le marketing basé sur les données.;https://www.kissmetrics.io  
+Email;Communication;Moyen de communication numérique universel. Utilisé pour messages directs, marketing ou support.;https://www.gmail.com  
+Tilda;Création de site;Plateforme no-code pour créer des sites web ou pages de vente. Propose un éditeur visuel simple.;https://tilda.cc  
+Webhook;Automatisation;Système d’envoi d’événement HTTP vers une autre app. Utilisé pour relier services entre eux en temps réel.;https://fr.wikipedia.org/wiki/Webhook  
+MailChimp;Emailing & Marketing;Outil d’email marketing complet : campagnes, automation, gestion de listes. Très populaire pour les newsletters.;https://mailchimp.com  
+MarketCall;Marketing & Leads téléphoniques;Plateforme Pay Per Call. Connecte annonceurs et affiliés générant des appels qualifiés.;https://marketcall.ru  
+ExpertSender;Emailing & Marketing;Marketing automation multicanal (email, SMS, web). Ciblage basé sur le comportement des clients.;https://www.expertsender.com  
+GetCourse;Formation en ligne & CRM;Plateforme pour vendre des cours en ligne, suivre les élèves et automatiser les ventes.;https://getcourse.ru  
+SendPulse;Emailing & Multicanal;Solution d’automatisation marketing : emails, SMS, push, chatbot. Tout-en-un pour campagnes multicanales.;https://sendpulse.com  
+BitBucket;Développement;Hébergement Git proposé par Atlassian. Utilisé pour gérer du code en équipe avec intégration à Jira.;https://bitbucket.org  
+Chat2Desk;Support client & Messagerie;Centralise les discussions via WhatsApp, Telegram, Facebook, etc. Idéal pour support client omnicanal.;https://chat2desk.com  
+Pyrus;Gestion de tâches & Workflow;Outil de gestion des tâches avec approbation en workflow. Permet de structurer les processus internes.;https://pyrus.com  
+MiniCRM;CRM;CRM simple et efficace pour TPE/PME. Aide à suivre prospects, clients, devis et automatiser des actions.;https://minicrm.io  
+Suite CRM;CRM;Alternative open source à Salesforce. Gère les contacts, opportunités, campagnes et tickets support.;https://suitecrm.com  
+SendBox;Emailing & Marketing;Outil d'envoi d’emails groupés avec suivi de performances. Utilisé pour les campagnes promotionnelles simples.;https://sendbox.co  
+GetResponse;Emailing & Funnels;Plateforme marketing tout-en-un : emails, tunnels de vente, webinaires. Idéale pour automatiser la relation client.;https://www.getresponse.com  
+CallGear;Téléphonie & Analytics;Solution de téléphonie cloud avec suivi des appels. Permet d'analyser les appels entrants et les performances pub.;https://callgear.com  
+Zendesk;Support client;Plateforme leader du support client multicanal (email, chat, ticket). Intégrée à de nombreux outils CRM.;https://www.zendesk.com  
+LPgenerator;Landing pages;Créateur de pages d’atterrissage optimisées pour la conversion. Idéal pour les campagnes publicitaires.;https://lpgenerator.ru  
+Chatra;Support client & Chat;Outil de chat en ligne avec fonctionnalités de suivi visiteurs. Conçu pour les petites entreprises.;https://chatra.io  
+Neaktor;Gestion de projet;Outil de gestion de tâches et collaboration en équipe. Inclut documents, commentaires, échéances.;https://neaktor.com  
+Trello;Gestion de projet;Outil visuel basé sur les tableaux Kanban. Utile pour suivre des projets et organiser le travail en équipe.;https://trello.com  
+Google BigQuery;Base de données & Analyse;Entrepôt de données cloud Google pour analyses massives. Conçu pour le big data et les requêtes SQL rapides.;https://cloud.google.com/bigquery  
+AliExpress;E-commerce & Fournisseurs;Marketplace B2C et B2B. Utilisé dans le dropshipping ou l’importation directe de produits.;https://www.aliexpress.com  
+DPD;Logistique & Livraison;Service de livraison de colis. Intégrable dans les boutiques e-commerce pour le suivi des commandes.;https://www.dpd.com  
+YouTrack;Développement & Suivi de bugs;Outil de gestion des bugs et des tickets pour les développeurs. Intégré aux workflows agiles.;https://www.jetbrains.com/youtrack  
+HTTP Request/Outgoing webhook;Automatisation;Permet d’envoyer une requête HTTP personnalisée vers une API tierce. Sert de connecteur universel.;https://fr.wikipedia.org/wiki/HTTP  
+TikTok;Réseaux sociaux;Réseau social centré sur les vidéos courtes. Utilisé en marketing pour le branding et la publicité native.;https://www.tiktok.com  
+Telegram;Messagerie;Application de messagerie sécurisée. Utilisée pour le support client ou les notifications via bots.;https://telegram.org  
+ClickHouse;Base de données & BI;SGBD colonne open source optimisé pour l’analytique temps réel. Utilisé pour gérer de grands volumes de données.;https://clickhouse.com  
+Yahoo;Réseau & Email;Ancien portail web avec moteur de recherche, email, finance, etc. Moins utilisé aujourd’hui.;https://www.yahoo.com  
+MySQL;Base de données;Système de gestion de base de données relationnelle open-source. Fréquemment utilisé pour les sites web.;https://www.mysql.com  
+Altegio;RDV & Gestion entreprise;Plateforme de réservation en ligne avec gestion d’agenda. Populaire dans les services et salons de beauté.;https://altegio.com  
+PostgreSQL;Base de données;Base de données relationnelle puissante et open-source. Supporte des fonctionnalités avancées (JSON, géo, etc.).;https://www.postgresql.org  
+Scheduled Trigger;Automatisation;Déclenche un scénario à une heure ou fréquence donnée. Utile pour les routines régulières (ex: tous les lundis).;https://fr.wikipedia.org/wiki/Cron  
+JavaScript;Développement;Langage de programmation web incontournable. Utilisé pour créer des interactions dynamiques dans les pages web.;https://developer.mozilla.org/en-US/docs/Web/JavaScript  
+WordPress;Création de site;CMS le plus populaire pour créer des blogs et sites vitrines. Large écosystème de plugins et thèmes.;https://wordpress.org  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Kommo;CRM;CRM simple axé sur les interactions via messagerie (WhatsApp, Telegram, Instagram). Met l'accent sur la communication directe et la conversion rapide.;https://kommo.com  
+Data Storage;Automatisation;Composant utilisé dans les plateformes comme Albato pour stocker temporairement des données entre deux actions dans un scénario d'automatisation.;N/A (Data Storage = composant technique Albato)  
+RSS Reader;Veille & Agrégation;Permet de suivre les flux RSS de différents sites pour centraliser l'information. Idéal pour la veille concurrentielle ou technologique.;N/A (RSS Reader = composant générique)  
+Kladana;ERP & Stock;Outil de gestion des stocks et des ventes pour PME. Permet de suivre les niveaux d'inventaire, la facturation et les commandes fournisseurs.;https://kladana.ru  
+Leeloo.ai;Marketing & Funnels;Outil de marketing automation et d'entonnoirs de vente (funnels) avec CRM intégré. Ciblé vers les infopreneurs et formations en ligne.;https://leeloo.ai  
+WooCommerce;E-commerce;Extension e-commerce de WordPress permettant de créer une boutique en ligne complète. Prise en charge des produits, paiements, livraisons.;https://woocommerce.com  
+SpreadSimple;Création de site;Génère un site web ou un catalogue en ligne directement depuis une feuille Google Sheets. Rapide et sans code.;https://spreadsimple.com  
+i-digital direct;SMS & Emailing;Plateforme de communication multicanal (SMS, Viber, Email) utilisée pour les campagnes marketing ciblées.;https://i-digitaldirect.com  
+Bitly;Outils marketing;Raccourcisseur de liens avec suivi de clics. Permet de personnaliser les URLs et mesurer les performances de campagnes.;https://bitly.com  
+HubSpot;CRM & Marketing;Plateforme CRM tout-en-un très connue, offrant des outils de marketing, ventes, support client et automatisation. Solution leader du secteur.;https://www.hubspot.com  
+Ortto;Marketing automation;Plateforme d'automatisation marketing avec visualisation de parcours client, email, SMS, pop-ups, analytics et scoring.;https://ortto.com  
+Eyenewton;Analytics & Comportement;Analyse le comportement utilisateur sur un site web avec heatmaps, enregistrements de sessions, entonnoirs de conversion. Aide à optimiser l'UX.;https://eyenewton.com  
+AlphaSMS;SMS marketing;Solution d'envoi de SMS en masse. Permet de créer des campagnes marketing ou des alertes transactionnelles personnalisées.;https://alphasms.com  
+ManyChat;Chatbot & Messaging;Création de chatbots pour Facebook Messenger, Instagram, WhatsApp. Très populaire pour l'automatisation des interactions.;https://manychat.com  
+Twilio;Téléphonie & Messaging;Plateforme cloud pour appels, SMS, emails, WhatsApp, etc. Utilisée pour ajouter des communications dans des apps ou systèmes.;https://www.twilio.com  
+SalesDrive;CRM;CRM commercial pour la gestion des leads, pipelines, appels, tâches et rapports. Conçu pour optimiser les conversions.;https://salesdrive.ru  
+Convertkit;Emailing & Funnels;Plateforme emailing dédiée aux créateurs (blogueurs, youtubeurs, coachs). Automatisation des emails, formulaires, tags et tunnels de vente.;https://convertkit.com  
+Clickmeeting;Webinaires;Plateforme webinaire pour organiser des réunions en ligne, formations ou événements avec enregistrement et salle virtuelle.;https://clickmeeting.com  
+Todoist;Productivité;Gestionnaire de tâches personnel ou professionnel avec priorités, rappels, projets. Synchronisé sur tous les appareils.;https://todoist.com  
+Zoom;Visioconférence;Outil de visioconférence très répandu pour réunions, webinaires ou formations en ligne. Fonctionnalités d'enregistrement, écran partagé, etc.;https://zoom.us  
+Hotmart;E-learning & Paiements;Plateforme tout-en-un pour vendre des produits digitaux (cours, ebooks, etc.). Gère paiements, affiliation, TVA, contenu protégé.;https://www.hotmart.com  
+Mobizon;SMS & Contacts;Outil pour envoyer des SMS en masse et gérer les contacts. Adapté aux campagnes marketing ou notifications clients.;https://mobizon.com  
+E-goi;Marketing multicanal;Outil d'automatisation marketing (email, SMS, push, téléphone). Combine CRM, email marketing, pages, et analytics.;https://e-goi.com  
+Duda;Création de sites;Constructeur de sites web pour agences et freelances avec fonctions de white-label. Optimisé pour performance et SEO.;https://www.duda.co  
+CoinMarketCap;Crypto & Finance;Base de données de suivi des prix des cryptomonnaies. Utilisé pour intégrer des informations crypto à d’autres systèmes.;https://coinmarketcap.com  
+Youtube leadform;Lead Gen & Ads;Format publicitaire YouTube avec formulaire intégré. Permet de collecter des leads directement depuis la vidéo.;https://ads.youtube.com  
+TeraSMS;SMS;Outil d'envoi de SMS personnalisés pour le marketing ou les notifications. Intégration possible avec d'autres outils.;https://terasms.ru  
+Zazumedia;Marketing;Plateforme marketing spécialisée en publicité programmatique, acquisition de leads et retargeting multi-plateformes.;https://zazumedia.com  
+Estismail;Emailing;Outil d’envoi d’e-mails en masse avec gestion de campagnes, liste de diffusion et statistiques.;https://estismail.ru  
+Serpstat;SEO & Analytics;Outil d’analyse SEO et de veille concurrentielle. Aide à optimiser le référencement naturel et les campagnes de recherche.;https://serpstat.com  
+Startsend;SMS & Emailing;Plateforme de campagnes SMS et Email avec rapports détaillés. Utilisée pour alertes et promotions ciblées.;https://startsend.ru  
+Bloxy;Création de site;Constructeur de site pour WordPress avec système par blocs, très flexible. Utilisé pour créer des pages sur-mesure.;https://bloxy.io  
+Gmail - Receiving Emails;Email & Automatisation;Module pour automatiser des workflows déclenchés par réception d’emails Gmail. Utilisé pour extraire infos ou initier des scénarios.;https://mail.google.com  
+A&A/FITPASS Calltracking;Téléphonie & Calltracking;Outil de tracking des appels téléphoniques liés à des campagnes marketing. Fournit des rapports de conversion par appel.;https://fitpass.ru  
+VideoForce;Webcam & Enregistrement;Outil pour créer des vidéos de vente via webcam ou mobile avec CTA intégrés. Utilisé pour humaniser les pages d’atterrissage.;https://videoforce.ru  
+Disparo PRO;SMS;Plateforme d'envoi massif de SMS. Inclut des outils de personnalisation, suivi, et statistiques de campagne.;https://disparo.pro  
+Typeform;Formulaires;Outil de création de formulaires interactifs et conviviaux. Très utilisé pour sondages, quizzes ou génération de leads.;https://typeform.com  
+Painel do Corretor (Sisweb);CRM immobilier;Solution de gestion des leads et contacts dédiée aux courtiers immobiliers brésiliens. Automatise le suivi et l’analyse des performances.;https://sisweb.com.br  
+SMS/profi;SMS marketing;Plateforme d’envoi de SMS marketing avec tableau de bord simple. Permet aussi d’automatiser les relances et alertes.;https://smsprofi.ru  
+SMSPilot;SMS;Service économique d’envoi de SMS internationaux. Souvent utilisé pour les notifications automatiques.;https://smspilot.ru  
+LeadForms;Formulaires & Leads;Créateur de formulaires optimisés pour la conversion. Intègre analytics, A/B testing, CRM.;https://leadforms.io  
+TELESTORE;Téléphonie;Fournisseur de services télécom avec intégration pour suivi d’appels. Utilisé en call tracking ou relation client.;https://telestore.ru  
+Asana;Gestion de projet;Outil de gestion de projets et de tâches pour équipes. Interface flexible avec calendriers, timelines, dépendances.;https://asana.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Slack;Communication & Collaboration;Messagerie d’équipe en temps réel, avec canaux, fichiers partagés et intégrations. Très utilisé en entreprise pour fluidifier la communication.;https://slack.com  
+Formdesigner;Formulaires;Outil pour créer des formulaires personnalisés avec logique conditionnelle. Idéal pour les enquêtes, inscriptions, feedbacks.;https://formdesigner.ru  
+SE Ranking;SEO & Analytics;Plateforme SEO tout-en-un : suivi de positions, audit technique, analyse concurrentielle, recherche de mots-clés.;https://seranking.com  
+Gurucan;Formation en ligne;Plateforme tout-en-un pour créer et vendre des cours, gérer des abonnements et animer une communauté.;https://gurucan.com  
+OLX;E-commerce & Petites annonces;Marketplace populaire pour publier et vendre des biens d’occasion localement. Présent surtout en Europe de l’Est, Amérique Latine, Inde.;https://www.olx.com  
+Seeneco;Analytics & Reporting;Outil d’analyse marketing, suivi des ventes et du trafic web. Permet de centraliser les performances multicanales.;https://seeneco.io  
+5crm;CRM;CRM simple pour gérer les leads, contacts et transactions. Conçu pour les petites entreprises.;https://5crm.ru  
+Gectaro;CRM & Automatisation;Plateforme CRM avec fonctionnalités d’automatisation des ventes, reporting et intégration multicanal.;https://gectaro.ru  
+Carrd;Création de site;Constructeur ultra simple de landing pages et sites personnels. Très apprécié pour les portfolios ou présentations rapides.;https://carrd.co  
+Rocket.Chat;Communication;Plateforme open source de messagerie d’équipe, alternative à Slack. Supporte chat, appels vidéo, intégrations et bots.;https://rocket.chat  
+Wrike;Gestion de projet;Outil complet pour gérer projets, tâches, ressources et calendriers. Utilisé par les équipes marketing, IT, et produit.;https://www.wrike.com  
+Twitter;Réseaux sociaux;Réseau social basé sur les messages courts (‘tweets’), utilisé pour la communication en temps réel, le marketing et la veille.;https://twitter.com  
+Recurly;Facturation & Abonnement;Plateforme spécialisée dans la gestion d’abonnements, paiements récurrents et facturation SaaS.;https://www.recurly.com  
+Sympla;Événements & Billetterie;Solution brésilienne pour créer, promouvoir et vendre des billets pour des événements en ligne ou physiques.;https://www.sympla.com.br  
+LiveWebinar;Webinaires;Plateforme de webinaires et visioconférences avec options d’interactivité, enregistrement et partage d’écran.;https://www.livewebinar.com  
+Potok;Recrutement;ATS (Applicant Tracking System) pour automatiser le recrutement, publier des offres et gérer les candidatures.;https://potok.io  
+Livestorm;Webinaires;Outil européen pour organiser des webinaires, réunions et démos produit, avec analyses détaillées.;https://www.livestorm.co  
+BigMarker;Webinaires & Événements;Plateforme pour webinaires, événements virtuels et sommets en ligne, adaptée aux grandes audiences.;https://www.bigmarker.com  
+PayPal;Paiement;Système de paiement en ligne mondial, utilisé pour les achats, abonnements et paiements entre particuliers.;https://www.paypal.com  
+Zoho Meeting;Visioconférence;Outil de réunion et webinaire simple, faisant partie de la suite Zoho. Propose enregistrement, écran partagé et chat.;https://www.zoho.com/meeting  
+Blue Jeans Meetings;Visioconférence;Plateforme de visioconférence professionnelle avec qualité audio/vidéo HD. Adaptée aux entreprises.;https://www.bluejeans.com  
+enKod;Marketing & Automatisation;Plateforme marketing pour campagnes email, SMS et automation, avec reporting détaillé.;https://enkod.io  
+Confluence;Documentation & Collaboration;Wiki collaboratif par Atlassian, utilisé pour centraliser la documentation d’équipe et les connaissances.;https://www.atlassian.com/software/confluence  
+Shopify;E-commerce;Plateforme e-commerce SaaS leader, permettant de créer une boutique en ligne, gérer les produits, paiements et expéditions.;https://www.shopify.com  
+Sales.Rocks;Prospection & Enrichissement;Outil d’enrichissement de données B2B, génération de leads et automatisation de campagnes commerciales.;https://sales.rocks  
+Moosend;Emailing & Marketing;Plateforme emailing et marketing automation avec segmentation, A/B testing et reporting.;https://moosend.com  
+lemlist;Prospection & Emailing;Outil d’emailing personnalisé pour la prospection B2B, avec séquences automatisées et tracking avancé.;https://lemlist.com  
+Airmeet;Événements & Networking;Plateforme pour organiser des conférences virtuelles, événements de réseautage et webinaires interactifs.;https://www.airmeet.com  
+Sendinblue;Emailing & Marketing;Solution française d’email marketing, SMS et automation, renommée en 2023 sous le nom Brevo.;https://www.brevo.com (Sendinblue renommé)  
+Insider;Marketing Automation;Plateforme d’orchestration marketing omnicanale, centrée sur la personnalisation et l’optimisation de l’expérience client.;https://useinsider.com  
+Encharge;Marketing Automation;Outil d’automatisation marketing orienté SaaS, avec scénarios, emails et scoring comportemental.;https://encharge.io  
+Deskera;ERP & CRM;Suite cloud pour PME intégrant comptabilité, CRM, ventes, RH et projets.;https://www.deskera.com  
+Frase;Contenu & SEO;Assistant IA pour la création de contenu optimisé SEO. Permet de rédiger, résumer et améliorer les articles.;https://www.frase.io  
+Acumbamail;Emailing;Plateforme emailing espagnole, offrant envoi de newsletters, automatisation et gestion de listes.;https://acumbamail.com  
+Formaloo;Formulaires & Apps;Outil no-code pour créer des formulaires, bases de données et applications internes.;https://formaloo.com  
+Ora;Gestion de projet;Plateforme agile pour gérer tâches, sprints, bugs et collaboration d’équipe.;https://ora.pm  
+Happy Scribe;Transcription & Sous-titrage;Service de transcription et sous-titrage automatique (avec IA) pour fichiers audio/vidéo.;https://www.happyscribe.com  
+Endorsal;Avis & Témoignages;Outil pour collecter et afficher des avis clients sur son site web, en facilitant la preuve sociale.;https://endorsal.io  
+SendFox;Emailing;Plateforme simple et économique pour l’envoi de newsletters automatisées. Idéale pour créateurs de contenu.;https://sendfox.com  
+Vadootv;Vidéo marketing;Plateforme d’hébergement et de diffusion de vidéos avec analytics, appels à l’action et branding.;https://vadoo.tv  
+MailRush.io;Emailing & Prospection;Outil d’emailing froid B2B pour prospection, avec gestion de la délivrabilité et séquences.;https://mailrush.io  
+Agiled;ERP & Gestion d’entreprise;Suite tout-en-un pour gérer projets, finances, CRM, facturation et RH.;https://agiled.app  
+Rasa.io;Newsletters IA;Solution de newsletters automatisées et personnalisées grâce à l’intelligence artificielle.;https://www.rasa.io  
+Useinbox;Emailing;Plateforme d’envoi d’emails en masse avec automatisation, segmentation et rapports.;https://useinbox.com  
+ClickUp;Gestion de projet;Outil tout-en-un combinant tâches, docs, chat et dashboards, très apprécié pour sa flexibilité.;https://clickup.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Clearout;Emailing & Vérification;Outil de vérification d’adresses e-mail pour améliorer la délivrabilité et nettoyer les listes de contacts.;https://clearout.io  
+Acadle;Formation & LMS;Plateforme LMS pour créer des académies en ligne et former des employés, clients ou partenaires.;https://acadle.com  
+Google Drive;Stockage cloud;Service de stockage et partage de fichiers en ligne, intégré à Google Workspace.;https://drive.google.com  
+Eventbrite;Événements & Billetterie;Plateforme de création, gestion et billetterie d’événements, en ligne et en personne.;https://www.eventbrite.com  
+Monday;Gestion de projet;Outil visuel pour planifier, suivre et gérer les projets et workflows d’équipe.;https://monday.com  
+Google Contacts;Contacts & CRM;Gestion centralisée des contacts Google, synchronisée avec Gmail, Agenda et autres services.;https://contacts.google.com  
+Constant Contact;Emailing;Plateforme d’email marketing avec templates, automation et rapports d’engagement.;https://www.constantcontact.com  
+Google Meet;Visioconférence;Service de visioconférence de Google, intégré à Google Calendar et Gmail.;https://meet.google.com  
+Coda;Productivité & Documentation;Outil hybride entre document et tableur, permettant de créer des workflows interactifs.;https://coda.io  
+Teamwork;Gestion de projet;Suite de gestion de projet et collaboration, incluant tâches, temps, facturation et messages.;https://www.teamwork.com  
+Microsoft Office 365;Productivité;Suite bureautique en ligne incluant Word, Excel, PowerPoint, Outlook, Teams.;https://www.microsoft.com/en-us/microsoft-365  
+Streak;CRM intégré à Gmail;CRM directement intégré à Gmail, pour gérer pipelines et contacts sans quitter sa boîte mail.;https://streak.com  
+Mailjet;Emailing;Plateforme emailing européenne, offrant envois transactionnels, marketing automation et API.;https://www.mailjet.com  
+Box;Stockage cloud;Stockage sécurisé de fichiers en ligne, avec gestion des permissions et collaboration.;https://www.box.com  
+Zendesk Sell;CRM;CRM commercial de Zendesk, focalisé sur la gestion des ventes et la productivité commerciale.;https://www.zendesk.com/sell  
+PandaDoc;Documents & Signature;Plateforme pour créer, envoyer et signer électroniquement des devis, contrats et propositions.;https://www.pandadoc.com  
+Agile CRM;CRM;CRM tout-en-un pour ventes, marketing et service client, avec automatisation et reporting.;https://www.agilecrm.com  
+Help Scout;Support client;Plateforme de support multicanal, offrant une expérience de helpdesk simple et collaborative.;https://www.helpscout.com  
+Chargebee;Facturation & Abonnement;Gestion des abonnements, facturation récurrente et conformité fiscale pour SaaS.;https://www.chargebee.com  
+Wufoo;Formulaires;Créateur de formulaires web simple, avec intégration CRM et paiements.;https://www.wufoo.com  
+Stackby;Gestion de données;Outil de base de données visuelle, mélangeant tableur, API et automatisation.;https://stackby.com  
+Google Tasks;Productivité;Gestionnaire de tâches léger, intégré à Gmail et Google Agenda.;https://tasks.google.com  
+Thinkific;Formation en ligne;Plateforme pour créer, commercialiser et vendre des cours en ligne.;https://www.thinkific.com  
+Harvest;Suivi du temps;Outil de suivi du temps et facturation pour équipes et freelances.;https://www.getharvest.com  
+Close;CRM & Prospection;CRM conçu pour les équipes commerciales, combinant appels, e-mails et pipeline de vente.;https://close.com  
+Klaviyo;Emailing & E-commerce;Plateforme d’email marketing spécialisée pour les boutiques e-commerce, avec segmentation et automation.;https://www.klaviyo.com  
+Acuity Scheduling;Prise de rendez-vous;Outil de planification en ligne pour prendre des rendez-vous et synchroniser les calendriers.;https://acuityscheduling.com  
+Parallel;Productivité & Collaboration;Outil collaboratif pour collecter et valider des informations auprès de clients ou équipes.;https://parallel.so  
+Paperform;Formulaires;Créateur de formulaires élégants, intégrant logique conditionnelle et paiements.;https://www.paperform.co  
+Pabbly Subscription and Billing;Abonnement & Paiement;Plateforme de gestion des abonnements, factures et paiements récurrents.;https://www.pabbly.com  
+Graphy;Formation & Création de contenu;Plateforme pour vendre des cours, héberger des communautés et organiser des événements.;https://graphy.com  
+Plutio;Gestion d’entreprise;Suite tout-en-un pour freelances et petites équipes : projets, factures, CRM, tâches.;https://plutio.com  
+Tidycal;Prise de rendez-vous;Outil simple pour planifier des rendez-vous, alternative légère à Calendly.;https://tidycal.com  
+Razorpay;Paiement;Solution de paiement indienne pour encaisser en ligne, gérer abonnements et paiements internationaux.;https://razorpay.com  
+Webflow;Création de site;Plateforme no-code pour concevoir des sites web interactifs et réactifs.;https://webflow.com  
+Stripe;Paiement;Passerelle de paiement mondiale pour sites web, SaaS et marketplaces.;https://stripe.com  
+Inoreader;Veille & Agrégation;Lecteur RSS avancé pour suivre actualités, blogs et flux personnalisés.;https://www.inoreader.com  
+Pushover;Notifications;Outil pour envoyer des notifications push vers des appareils mobiles et ordinateurs.;https://pushover.net  
+Signaturely;Signature électronique;Plateforme pour envoyer, signer et gérer des documents en ligne.;https://signaturely.com  
+ShortySMS;SMS marketing;Plateforme d’envoi de SMS marketing avec automatisation et segmentation.;https://shortysms.com  
+Ghost;Blogging;CMS open-source orienté blogging, offrant performance et simplicité.;https://ghost.org  
+Fiken.no;Comptabilité;Logiciel de comptabilité pour PME, utilisé principalement en Norvège.;https://fiken.no  
+Verimail;Validation d’e-mails;Outil pour vérifier la validité des adresses email avant envoi de campagnes.;https://verimail.io  
+QuestionScout;Formulaires;Créateur de formulaires avancés avec logique, calculs et intégrations.;https://questionscout.com  
+Thrivecart;E-commerce & Paiement;Plateforme pour vendre produits digitaux, gérer paiements et affiliés.;https://thrivecart.com  
+BotHunter;Automatisation & Bots;Outil pour automatiser des interactions et générer des leads via messageries.;https://bothunter.io  
+Upcoach;Coaching & Formation;Plateforme pour coachs et formateurs, combinant gestion de programmes et communauté.;https://upcoach.com  
+MailerLite;Emailing;Outil d’email marketing simple avec automation, landing pages et éditeur drag-and-drop.;https://www.mailerlite.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Better Stack;Monitoring & Alerting;Plateforme pour surveiller la disponibilité des services web, envoyer des alertes et visualiser des logs.;https://betterstack.com  
+Cloudflare;Sécurité & Performance web;Réseau de diffusion de contenu (CDN), sécurité DDoS et optimisation des sites web pour améliorer performance et disponibilité.;https://www.cloudflare.com  
+Notion;Productivité & Collaboration;Outil tout-en-un combinant notes, bases de données, wikis et gestion de projets.;https://www.notion.so  
+Flowlu;Gestion d’entreprise;Suite cloud pour gérer projets, CRM, finances et tâches, pensée pour les PME.;https://flowlu.com  
+Noysi;Communication & Collaboration;Plateforme de communication d’équipe avec chat, appels, tâches et partage de fichiers.;https://noysi.com  
+WOXO;Contenu vidéo & Social media;Outil pour créer des vidéos sociales automatiquement à partir de textes ou images.;https://woxo.tech  
+Instantly;Prospection par e-mail;Plateforme pour envoyer des campagnes d’e-mails froids et gérer des séquences multicanales.;https://instantly.ai  
+Bird;Messagerie & Notifications;Solution pour envoyer des messages automatisés via email, SMS, WhatsApp, etc.;https://bird.com  
+Calendly;Prise de rendez-vous;Outil pour planifier des rendez-vous en ligne et synchroniser les calendriers automatiquement.;https://calendly.com  
+Salesforce;CRM;Le CRM leader mondial pour gérer les ventes, le service client, le marketing et l’analyse des données.;https://www.salesforce.com  
+Selzy;Emailing;Plateforme simple pour gérer campagnes d’emailing, newsletters et automation.;https://selzy.com  
+Intercom;Support client & Chat;Plateforme de communication client multicanale avec chat en direct, bots et e-mails.;https://www.intercom.com  
+Teletype App;Création de contenu;Outil minimaliste pour rédiger et publier des articles, souvent utilisé pour les blogs ou newsletters.;https://teletype.in  
+Dropbox;Stockage cloud;Service de stockage et partage de fichiers, avec synchronisation multiplateforme.;https://www.dropbox.com  
+Boomerang;Email & Productivité;Extension pour programmer des e-mails, définir des rappels et gérer sa boîte Gmail plus efficacement.;https://www.boomeranggmail.com  
+AWeber;Emailing;Plateforme d’email marketing avec gestion des listes, automatisation et reporting.;https://www.aweber.com  
+ClientJoy;CRM & Facturation;CRM pour freelances et petites entreprises, combinant gestion client, devis et paiements.;https://clientjoy.io  
+LinkedIn;Réseau professionnel;Réseau social professionnel pour le networking, le recrutement et le marketing B2B.;https://www.linkedin.com  
+Google Calendar;Calendrier;Service de planification et gestion d’événements, synchronisé avec l’écosystème Google.;https://calendar.google.com  
+Switchy;Tracking & Réduction de lien;Outil pour créer des liens courts avec suivi analytique et personnalisation avancée.;https://switchy.io  
+Google Play;Distribution d’apps;Boutique officielle Android pour distribuer des applications, jeux et contenus numériques.;https://play.google.com  
+Google Maps;Géolocalisation;Service de cartographie et navigation, avec API pour intégrer des cartes dans les applications.;https://maps.google.com  
+Qwary;Enquêtes & Feedback;Plateforme de sondages interactifs pour collecter des avis clients et analyser leur expérience.;https://qwary.com  
+Heartbeat;Communauté & Collaboration;Outil pour créer et gérer des communautés privées avec discussions, événements et ressources.;https://heartbeat.chat  
+Toggl Track;Suivi du temps;Application de time-tracking pour suivre le temps passé sur les projets et analyser la productivité.;https://toggl.com/track  
+Jotform;Formulaires;Créateur de formulaires en ligne, compatible paiements, uploads de fichiers et intégrations tierces.;https://www.jotform.com  
+HighLevel;CRM & Marketing;Plateforme tout-en-un pour agences marketing, combinant CRM, funnels, SMS, e-mails et automation.;https://gohighlevel.com  
+OpenAI;IA & NLP;Fournisseur d’API d’intelligence artificielle, notamment le modèle ChatGPT, pour générer du texte, des résumés, ou répondre à des questions.;https://openai.com  
+FirstPromoter;Affiliation & Référencement;Outil pour gérer des programmes d’affiliation et suivre les performances des partenaires.;https://firstpromoter.com  
+Zoho CRM;CRM;CRM de la suite Zoho, avec modules pour ventes, marketing, service client et analytics.;https://www.zoho.com/crm  
+Growmatik;Marketing Automation;Plateforme de marketing comportemental pour personnaliser les contenus et automatiser les campagnes.;https://growmatik.ai  
+Zoho Mail;Email professionnel;Service d’e-mail sécurisé et professionnel, intégré à l’écosystème Zoho.;https://www.zoho.com/mail  
+Freshworks (Freshdesk);Support client;Plateforme de helpdesk multicanale, offrant gestion des tickets, bases de connaissances et automatisations.;https://freshworks.com/freshdesk  
+WIX;Création de site;Constructeur de sites web no-code avec templates et fonctionnalités e-commerce.;https://www.wix.com  
+Adalo;Création d’applications;Outil no-code pour créer des applications mobiles fonctionnelles, sans développement.;https://www.adalo.com  
+Stable Diffusion;IA générative;Modèle d’intelligence artificielle open source pour générer des images à partir de textes.;https://stablediffusionweb.com  
+YouTube;Réseaux sociaux & Vidéo;Plateforme de partage de vidéos, streaming en direct et publicité vidéo.;https://www.youtube.com  
+Zoho Books;Comptabilité;Logiciel de comptabilité cloud pour facturation, gestion des dépenses et reporting.;https://www.zoho.com/books  
+Synthesia;IA vidéo;Outil pour créer des vidéos avec avatars et voix synthétiques à partir de textes.;https://www.synthesia.io  
+Miro;Collaboration visuelle;Tableau blanc collaboratif en ligne pour brainstormings, schémas et ateliers à distance.;https://miro.com  
+iSpring Learn;Formation & LMS;Système de gestion de l’apprentissage pour créer, gérer et suivre des formations en ligne.;https://www.ispring.com/learn  
+Yelp;Réseaux sociaux & Avis;Plateforme pour consulter et publier des avis sur des commerces et services locaux.;https://www.yelp.com  
+Time Doctor;Suivi du temps;Outil de time-tracking avancé avec capture d’écran, utile pour le télétravail et les freelances.;https://www.timedoctor.com  
+Discord;Communauté & Communication;Plateforme de chat vocal et texte, utilisée par les communautés et les équipes de travail.;https://discord.com  
+Certopus;Certification & Diplômes;Outil pour créer, distribuer et vérifier des certificats numériques.;https://certopus.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Facebook Group;Réseaux sociaux & Communautés;Espace communautaire au sein de Facebook pour échanger autour de centres d’intérêt, organiser des événements et partager du contenu.;https://www.facebook.com/groups  
+Patreon;Monétisation de communauté;Plateforme pour les créateurs permettant d’obtenir un revenu récurrent de leurs fans via abonnements.;https://www.patreon.com  
+Medium;Création de contenu;Plateforme de publication d’articles et de blogs, axée sur la qualité éditoriale et la visibilité.;https://medium.com  
+Reddit;Réseaux sociaux & Communautés;Plateforme de discussion structurée par sujets (subreddits), très utilisée pour la veille, l’échange et l’engagement communautaire.;https://www.reddit.com  
+DeepL;Traduction & IA;Service de traduction automatique basé sur l’intelligence artificielle, réputé pour sa précision.;https://www.deepl.com  
+Magento;E-commerce;CMS open-source puissant pour créer des boutiques en ligne complexes, avec personnalisation avancée.;https://magento.com  
+Eden AI;API IA;Marketplace d’API d’intelligence artificielle, regroupant traduction, reconnaissance vocale, analyse d’images, etc.;https://edenai.co  
+Nifty;Gestion de projet;Plateforme combinant gestion de tâches, calendrier, documents et discussions pour les équipes.;https://niftypm.com  
+AidaForm;Formulaires;Créateur de formulaires en ligne avec logique conditionnelle, adapté aux sondages, inscriptions, paiements.;https://aidaform.com  
+Suitedash;ERP & Gestion client;Suite tout-en-un pour CRM, facturation, projets et portail client, pensée pour les agences et freelances.;https://suitedash.com  
+Ayrshare;Social media automation;Outil pour programmer et publier des posts sur plusieurs réseaux sociaux depuis un seul endroit.;https://ayrshare.com  
+Writesonic;IA & Contenu;Assistant de rédaction basé sur l’IA pour générer articles, descriptions de produits, posts et publicités.;https://writesonic.com  
+Hugging Face;IA & Machine Learning;Plateforme collaborative open-source pour partager, entraîner et utiliser des modèles IA.;https://huggingface.co  
+Bubble;No-code & Applications web;Plateforme no-code pour créer des applications web interactives sans écrire de code.;https://bubble.io  
+Jasper;IA & Marketing;Assistant rédactionnel IA pour créer du contenu marketing, des articles et des posts engageants.;https://www.jasper.ai  
+Marquiz;Formulaires interactifs;Outil de création de quiz et formulaires interactifs pour capturer des leads et segmenter l’audience.;https://marquiz.io  
+Google Docs;Productivité;Traitement de texte en ligne collaboratif, intégré à Google Workspace.;https://docs.google.com  
+Crove;Automatisation de documents;Plateforme pour automatiser la création et l’envoi de documents personnalisés.;https://crove.app  
+Amplemarket;Prospection B2B;Plateforme pour enrichir, cibler et automatiser les campagnes de prospection commerciale.;https://amplemarket.com  
+Viber;Messagerie;Application de messagerie et appels, utilisée à titre personnel et professionnel, notamment pour les campagnes marketing.;https://www.viber.com  
+FMX;Gestion des installations;Plateforme de gestion des opérations, maintenance et équipements pour les installations industrielles et commerciales.;https://www.gofmx.com  
+Google Search Console;SEO;Outil gratuit de Google pour suivre la performance de son site dans les résultats de recherche.;https://search.google.com/search-console  
+ChatBase;IA & Chatbots;Plateforme pour créer des chatbots IA à partir de sa base de connaissances ou de son site web.;https://chatbase.co  
+Ecwid;E-commerce;Extension e-commerce légère pour transformer n’importe quel site web en boutique en ligne.;https://www.ecwid.com  
+Vivantio;Support client;Solution ITSM pour gérer le support technique, les tickets et les demandes internes.;https://www.vivantio.com  
+Retable;Bases de données collaboratives;Outil de gestion de données collaboratives façon tableur, adapté aux équipes.;https://retable.io  
+CalendarHero;Prise de rendez-vous;Assistant intelligent pour planifier des rendez-vous et réunions.;https://calendarhero.com  
+Google Forms;Formulaires;Outil gratuit pour créer des sondages, quiz et collecter des réponses.;https://forms.google.com  
+Facebook Pages;Réseaux sociaux & Entreprises;Pages officielles sur Facebook pour représenter des marques, entreprises ou personnalités.;https://www.facebook.com/pages  
+Xero;Comptabilité;Logiciel de comptabilité en ligne, destiné aux PME pour la facturation, les notes de frais et la gestion bancaire.;https://www.xero.com  
+pCloud;Stockage cloud;Service de stockage de fichiers sécurisé avec options de chiffrement.;https://www.pcloud.com  
+Tomba;Prospection B2B;Outil pour trouver des emails professionnels à partir de noms de domaines.;https://tomba.io  
+Jira Software Cloud;Gestion de projet & Développement;Outil de gestion agile pour planifier, suivre et livrer des projets logiciels.;https://www.atlassian.com/software/jira  
+Pipedrive;CRM;CRM orienté ventes avec interface en pipeline et automatisations simples.;https://www.pipedrive.com  
+Google Analytics 4;Analytics web;Nouvelle version de Google Analytics, offrant analyses basées sur les événements et insights avancés.;https://analytics.google.com  
+UserGuiding;Onboarding & UX;Outil pour créer des guides interactifs et tutoriels dans les applications web.;https://userguiding.com  
+Squarespace;Création de site;Plateforme tout-en-un pour créer des sites vitrines, blogs et boutiques avec design soigné.;https://www.squarespace.com  
+Quickbooks Online;Comptabilité;Solution comptable cloud pour petites entreprises, couvrant facturation, dépenses et rapports.;https://quickbooks.intuit.com  
+Neuralspace;IA vocale & texte;Plateforme IA spécialisée dans la reconnaissance vocale, la traduction et l’analyse de texte multilingue.;https://neuralspace.ai  
+FreshBooks;Comptabilité;Logiciel cloud de facturation et comptabilité pour freelances et petites entreprises.;https://www.freshbooks.com  
+Marketing Master IO;Marketing automation;Outil d’automatisation marketing multicanal (Messenger, SMS, e-mail) avec CRM intégré.;https://marketingmaster.io  
+Sage Accounting;Comptabilité;Solution de gestion comptable et financière pour PME.;https://www.sage.com  
+Nexweave;Personnalisation marketing;Plateforme pour créer des contenus dynamiques personnalisés (images, vidéos, pages web).;https://nexweave.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+Brevo;Emailing & Marketing;Anciennement Sendinblue, plateforme d’emailing, SMS, automation et CRM pour petites et moyennes entreprises.;https://www.brevo.com  
+Flexbe;Création de site;Outil pour créer des landing pages et sites web orientés conversion, avec éditeur drag-and-drop.;https://flexbe.com  
+Doran;Marketing automation;Plateforme de campagnes marketing multicanal, incluant email, SMS, réseaux sociaux et notifications push.;https://doran.app  
+Sellix;E-commerce & Paiement;Plateforme pour vendre des produits digitaux, clés, abonnements et accepter des paiements crypto.;https://sellix.io  
+Microsoft Outlook;Email & Calendrier;Client email et calendrier professionnel, intégré à Microsoft 365.;https://outlook.live.com  
+Pinterest;Réseaux sociaux & Inspiration;Réseau social basé sur le partage d’images, utilisé pour l’inspiration, le e-commerce et la publicité.;https://www.pinterest.com  
+Instagram for Business;Réseaux sociaux & Marketing;Version professionnelle d’Instagram pour gérer pages, publicités, analytics et ventes.;https://business.instagram.com  
+Microsoft Teams;Communication & Collaboration;Plateforme de messagerie, appels et visioconférences, intégrée à Microsoft 365.;https://www.microsoft.com/en-us/microsoft-teams  
+Airtable;Base de données & Collaboration;Mélange entre tableur et base de données, avec interface intuitive et automatisations.;https://airtable.com  
+Dashly;Marketing & Chat;Plateforme de marketing conversationnel avec chat en direct, pop-ups, email automation et analytics.;https://dashly.io  
+Microsoft Excel;Tableur;Logiciel de tableur leader, utilisé pour calculs, analyses et visualisations.;https://www.microsoft.com/en-us/microsoft-365/excel  
+Tinify;Optimisation d’images;Outil en ligne pour compresser les images sans perte notable de qualité, améliorant la performance web.;https://tinypng.com  
+Smarty CRM;CRM;CRM léger et simple pour TPE, permettant la gestion des leads, tâches et opportunités.;https://smartycrm.ru  
+Online Reviews;E-réputation;Outil de gestion et collecte d’avis clients pour améliorer la réputation en ligne.;https://onlinereviews.io  
+Sessions;Webinaires & Réunions;Plateforme pour organiser des sessions interactives (webinaires, formations, événements en ligne).;https://sessions.us  
+Reverse Contact;Prospection;Outil pour enrichir les données d’un contact à partir d’un simple email ou domaine.;https://reversecontact.com  
+Climbo;E-réputation;Plateforme pour collecter, gérer et diffuser les avis clients sur les principales plateformes.;https://climbo.com  
+Microsoft To Do;Productivité;Gestionnaire de tâches personnel avec rappels et intégration Outlook.;https://todo.microsoft.com  
+Reoon;Emailing & Validation;Outil pour nettoyer les listes email et améliorer la délivrabilité.;https://reoon.com  
+Moxie;CRM & Gestion freelance;Suite pour freelances incluant CRM, facturation, gestion de projets et contrats.;https://moxie.so  
+ZagoMail;Emailing & Automation;Plateforme emailing avec automatisation, séquences et création de landing pages.;https://zagomail.com  
+Textdrip;SMS marketing;Outil pour envoyer des campagnes SMS automatisées et suivre les réponses.;https://textdrip.com  
+Breakcold;Prospection & Réseaux sociaux;Outil de prospection multicanal combinant e-mail et réseaux sociaux.;https://breakcold.com  
+Typebot;Chatbots;Créateur de chatbots conversationnels personnalisés pour sites web et apps.;https://typebot.io  
+Zoho Desk;Support client;Helpdesk multicanal avec tickets, base de connaissances et analytics, partie de la suite Zoho.;https://www.zoho.com/desk  
+Mailercloud;Emailing;Plateforme pour créer, envoyer et suivre des campagnes email avec segmentation.;https://www.mailercloud.com  
+LINE;Messagerie;Application de messagerie populaire en Asie, utilisée à titre personnel et commercial.;https://line.me  
+Dukaan;E-commerce;Plateforme indienne pour créer rapidement une boutique en ligne sans connaissances techniques.;https://mydukaan.io  
+WhatsApp Business API;Messagerie & Support;API officielle pour intégrer WhatsApp dans les systèmes CRM et helpdesk.;https://business.whatsapp.com  
+Birdview;Gestion de projet;Outil de gestion de projet pour planifier, suivre et visualiser les tâches en équipe.;https://birdviewprojects.com  
+Sniply;Marketing de contenu;Outil pour ajouter des CTA sur des liens partagés afin de capter des leads.;https://snip.ly  
+Taskade;Productivité & Collaboration;Outil de prise de notes, gestion de tâches et collaboration en temps réel.;https://taskade.com  
+AlbatoAI;IA & Automatisation;Module IA d’Albato pour enrichir les automatisations avec de l’intelligence artificielle.;https://albato.com/ai  
+Infinity;Gestion de projet;Plateforme flexible pour gérer projets, tâches, bases de données et calendriers.;https://startinfinity.com  
+Systeme.io;E-commerce & Formation;Suite tout-en-un pour vendre des produits, créer des tunnels de vente et héberger des formations.;https://systeme.io  
+Documentero;Documents & Contrats;Outil pour générer, signer et gérer des documents et contrats en ligne.;https://documentero.io  
+CS-Cart;E-commerce;Plateforme pour créer des marketplaces et boutiques en ligne multi-vendeurs.;https://cs-cart.com  
+Mobilo;Cartes de visite numériques;Solution pour créer et partager des cartes de visite NFC intelligentes.;https://mobilocard.com  
+Tawk.to;Support client & Chat;Chat en direct gratuit pour sites web, avec suivi des visiteurs et intégrations.;https://tawk.to  
+Switchboard Canvas;Personnalisation d’images;Outil API pour générer automatiquement des images marketing personnalisées.;https://switchboard.ai  
+Gemini AI;IA & Générative;Modèle d’intelligence artificielle de Google, concurrent de ChatGPT, pour génération de texte et images.;https://deepmind.google/technologies/gemini  
+Flotiq;Headless CMS;CMS flexible et API-first pour gérer et distribuer des contenus.;https://flotiq.com  
+Nom;Catégorie;Description;N/A (Nom générique)  
+AITable;IA & Bases de données;Outil combinant IA et base de données collaborative pour analyser, enrichir et automatiser les données.;https://aitable.ai  
+AltText.ai;IA & Accessibilité;Générateur d’alternatives textuelles pour images, afin d’améliorer l’accessibilité et le SEO.;https://alttext.ai  
+Google Slides;Productivité;Application de présentation en ligne collaborative, intégrée à Google Workspace.;https://slides.google.com  
+Simla;E-commerce & CRM;Plateforme unifiée de gestion e-commerce, CRM, support et automatisation.;https://simla.io  
+Closum;Emailing & CRM;Outil de marketing automation pour envoyer des emails personnalisés et gérer les contacts.;https://closum.com  
+Trafft;Prise de rendez-vous;Solution de réservation en ligne avec paiement, notifications et synchronisation calendrier.;https://trafft.com  
+Google My Business;Référencement local;Outil de gestion de la présence locale sur Google (fiches d’établissement, horaires, avis).;https://google.com/business  
+NinjaOne;IT Management;Plateforme de gestion informatique (RMM) pour surveiller et gérer les appareils à distance.;https://ninjaone.com  
+GoZen Forms;Formulaires;Créateur de formulaires no-code, orienté collecte de leads et sondages.;https://gozen.io/forms  
+Mailparser;Automatisation & Extraction;Outil pour extraire automatiquement des données à partir d’emails reçus.;https://mailparser.io  
+Launched;Lancement produit;Plateforme pour planifier, organiser et promouvoir les lancements de produits.;https://launched.io  
+Chanty;Communication & Collaboration;Messagerie d’équipe simple avec gestion des tâches intégrée.;https://chanty.com  
+Cloudinary;Media & CDN;Plateforme cloud pour gérer, transformer et diffuser des images et vidéos.;https://cloudinary.com  
+Luma;Événements & Communauté;Plateforme pour organiser, promouvoir et gérer des événements en ligne.;https://lu.ma  
+LinkDeal;Affiliation & Marketing;Outil pour gérer des campagnes d’affiliation et monétiser des contenus via des partenariats.;https://linkdeal.io  
+SMS-iT;SMS marketing;Solution complète pour campagnes SMS, MMS, voix et automation multicanal.;https://smsit.ai  
+Zoho People;RH & Gestion employés;Système RH pour gérer les congés, feuilles de temps, onboarding et performance.;https://zoho.com/people  
+BambooHR;RH;Logiciel RH pour PME, couvrant recrutement, onboarding, gestion des performances et reporting.;https://bamboohr.com  
+Makeforms;Formulaires;Outil pour créer des formulaires sécurisés, avec logique avancée et design personnalisable.;https://makeforms.io  
+Fluent Forms;Formulaires (WordPress);Extension WordPress pour créer des formulaires avec logique conditionnelle, paiements et intégrations.;https://fluentforms.com  
+Microsoft Dynamics CRM 365;CRM;Suite CRM de Microsoft pour gérer ventes, service client et marketing.;https://dynamics.microsoft.com/crm  
+Greenhouse;Recrutement;Système de suivi des candidatures (ATS) pour recruter et intégrer de nouveaux employés.;https://greenhouse.io  
+Workday;RH & Finance;Solution cloud pour gérer RH, finances, planification et analytics.;https://workday.com  
+Learnworlds;Formation en ligne;Plateforme pour créer, vendre et héberger des cours en ligne interactifs.;https://learnworlds.com  
+RocketReach;Prospection & Enrichissement;Outil pour trouver les contacts professionnels et enrichir les bases de données.;https://rocketreach.co  
+ManyContacts;Capture de leads;Barre de capture de leads pour sites web, affichant formulaires, coupons ou messages personnalisés.;https://manycontacts.com  
+Grawt;E-réputation;Outil pour collecter des avis clients et améliorer la réputation en ligne.;https://grawt.io  
+Square;Paiement;Solution de paiement pour points de vente physiques et en ligne, incluant terminal et logiciel de caisse.;https://squareup.com  
+Gravitec.net;Notifications push;Plateforme pour envoyer des notifications push web segmentées et automatisées.;https://gravitec.net  
+Cloutly;E-réputation;Outil pour collecter, gérer et diffuser des avis clients.;https://cloutly.com  
+Claude AI (Anthropic);IA conversationnelle;Modèle d’IA développé par Anthropic, concurrent de ChatGPT pour le traitement du langage.;https://anthropic.com  
+Robolly;Automatisation de design;API pour générer automatiquement des visuels personnalisés.;https://robolly.com  
+noCRM;CRM;CRM centré sur la prospection et la conversion, avec pipeline simple et intuitif.;https://nocrm.io  
+Sendloop;Emailing;Plateforme pour envoyer et gérer des campagnes email marketing.;https://sendloop.com  
