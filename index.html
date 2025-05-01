@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('appData', JSON.stringify(allData));
                     renderTable(allData);
                     generateCategorySelect(allData);
+                    document.querySelector('#categorySelect option[value="all"]')
+        .textContent = translations[savedLang].allCategories;
+
                     document.getElementById('noDataMessage').style.display = 'none';
                 }
             });
