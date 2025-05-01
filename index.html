@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     allData = results.data;
                     localStorage.setItem('appData', JSON.stringify(allData));
                     renderTable(allData);
-                    generateCategorySelect(allData);
+                    generateCategorySelect(allData, translations[savedLang].allCategories);
+
                     document.querySelector('#categorySelect option[value="all"]')
         .textContent = translations[savedLang].allCategories;
 
@@ -105,13 +106,13 @@ function renderTable(data) {
     });
 }
 
-function generateCategorySelect(data) {
-    const select = document.getElementById('categorySelect');
-    select.innerHTML = '<option value="all">Toutes les catégories</option>';
-    const categories = [...new Set(data.map(row => row.Catégorie))].filter(Boolean).sort();
-    categories.forEach(cat => {
-        select.innerHTML += `<option value="${cat}">${cat}</option>`;
-    });
+function generateCategorySelect(data, label) {
+  const select = document.getElementById('categorySelect');
+  select.innerHTML = `<option value="all">${label}</option>`;
+  const categories = [...new Set(data.map(r => r.Catégorie))].filter(Boolean).sort();
+  categories.forEach(cat => {
+    select.innerHTML += `<option value="${cat}">${cat}</option>`;
+  });
 
     select.addEventListener('change', function () {
         const selectedCat = this.value;
@@ -179,18 +180,19 @@ document.getElementById('languageSelect').addEventListener('change', function() 
 
     // Recharger le CSV correspondant à la langue
     fetch(csvFiles[lang])
-        .then(response => response.text())
-        .then(csvText => {
-            Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: function (results) {
-                    allData = results.data;
-                    renderTable(allData);
-                    generateCategorySelect(allData);
-                }
-            });
-        });
+  .then(r => r.text())
+  .then(csvText => {
+    Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
+      complete: res => {
+        allData = res.data;
+        renderTable(allData);
+        generateCategorySelect(allData, translations[lang].allCategories);
+      }
+    });
+  });
+
 });
 
 
