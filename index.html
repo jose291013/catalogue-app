@@ -41,8 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script>
 let allData = [];
-const savedLang = localStorage.getItem('selectedLanguage') || 'fr';
-const csvUrl = csvFiles[savedLang];
+
 
  // Chemin relatif vers ton fichier CSV
 
@@ -150,6 +149,10 @@ const csvFiles = {
     en: 'application-en.csv',
     es: 'application-es.csv'
 };
+const savedLang = localStorage.getItem('selectedLanguage') || 'fr';
+document.getElementById('languageSelect').value = savedLang;
+const csvUrl = csvFiles[savedLang];
+
 
 document.getElementById('languageSelect').addEventListener('change', function() {
     const lang = this.value;
