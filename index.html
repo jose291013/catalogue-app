@@ -14,6 +14,10 @@
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Rechercher une application...">
     <div id="categoryButtons" class="mb-3"></div>
     <button id="clearData" class="btn btn-danger btn-sm mb-3">Effacer les données enregistrées</button>
+    <select id="categorySelect" class="form-select mb-3">
+        <option value="all">Toutes les catégories</option>
+    </select>
+    
     <table class="table table-striped">
         <thead>
         <tr>
@@ -89,22 +93,20 @@ function renderTable(data) {
 }
 
 function generateCategoryButtons(data) {
-    const container = document.getElementById('categoryButtons');
-    container.innerHTML = '<button class="btn btn-secondary btn-sm me-2 category-btn active" data-category="all">Toutes</button>';
+    const select = document.getElementById('categorySelect');
+    select.innerHTML = '<option value="all">Toutes les catégories</option>';
     const categories = [...new Set(data.map(row => row.Catégorie))].filter(Boolean).sort();
     categories.forEach(cat => {
-        container.innerHTML += `<button class="btn btn-outline-secondary btn-sm me-2 category-btn" data-category="${cat}">${cat}</button>`;
+        select.innerHTML += `<option value="${cat}">${cat}</option>`;
     });
-    document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.addEventListener('click', function () {
-            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            const selectedCat = this.getAttribute('data-category');
-            const filtered = selectedCat === 'all' ? allData : allData.filter(row => row.Catégorie === selectedCat);
-            renderTable(filtered);
-        });
+
+    select.addEventListener('change', function () {
+        const selectedCat = this.value;
+        const filtered = selectedCat === 'all' ? allData : allData.filter(row => row.Catégorie === selectedCat);
+        renderTable(filtered);
     });
 }
+
 </script>
 </body>
 </html>
