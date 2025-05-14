@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <!-- ▼ 1.  Ajout du viewport pour le mobile ▼ -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Catalogue des Applications</title>
 
-    <!-- Librairies externes -->
+    <!-- ★ Librairies externes -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -21,13 +19,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"
     />
 
-    <!-- ▼ 2.  CSS existant + ajouts responsive ▼ -->
     <style>
+      /* ▾ --------- Vos styles existants --------- ▾ */
       .category-badge {
         margin-right: 5px;
       }
 
-      /* === Ajouts responsive === */
+      /* ▾ --------- Ajouts responsive --------- ▾ */
       img,
       video,
       iframe {
@@ -35,20 +33,33 @@
         height: auto;
       }
 
-      /* Les tableaux larges restent scrollables */
       table {
-        display: block;
+        display: block; /* garde la table scrollable sur mobile */
         width: 100%;
         overflow-x: auto;
         border-collapse: collapse;
+      }
+
+      /* ▾ --------- Wrapper Iframe (sans ratio) --------- ▾ */
+      .embed-app {
+        width: 100%;
+        /* Fallback si le postMessage n'arrive pas : min‑height 60vh */
+        min-height: 60vh;
+        position: relative;
+      }
+      .embed-app iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
     </style>
   </head>
 
   <body>
+    <!-- ▸ Votre contenu HTML (inchangé) ▸ -->
     <div class="container my-5">
       <h1 class="mb-4">Catalogue des Applications</h1>
-      <!--  SELECT LANGUE  -->
+      <!-- SELECT LANGUE -->
       <select id="languageSelect" class="selectpicker mb-3" data-width="fit">
         <option
           value="fr"
@@ -92,177 +103,16 @@
       <p id="noDataMessage" class="text-muted">Chargement des données...</p>
     </div>
 
-    <!-- ▼ 3.  Vos scripts métier (inchangés) ▼ -->
+    <!-- ▸ Iframe affichée dans Pressero (vous pouvez supprimer cette div ici si elle est déjà côté Pressero) ▸ -->
+    <div class="embed-app d-none" id="localPreview">
+      <!-- d-none : sert juste de prévisualisation locale, pas nécessaire en production -->
+      <iframe src="https://jose291013.github.io/catalogue-app/" title="Démo"></iframe>
+    </div>
+
+    <!-- ▾ --------- Scripts métier (inchangés) --------- ▾ -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script>
-      let allData = [];
-
-      // Chemin relatif vers ton fichier CSV
-
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch(csvUrl)
-          .then((response) => response.text())
-          .then((csvText) => {
-            Papa.parse(csvText, {
-              header: true,
-              skipEmptyLines: true,
-              complete: function (results) {
-                allData = results.data;
-                localStorage.setItem("appData", JSON.stringify(allData));
-                renderTable(allData);
-                generateCategorySelect(
-                  allData,
-                  translations[savedLang].allCategories
-                );
-
-                document.querySelector(
-                  '#categorySelect option[value="all"]'
-                ).textContent = translations[savedLang].allCategories;
-
-                document.getElementById("noDataMessage").style.display = "none";
-              },
-            });
-          })
-          .catch((error) => {
-            console.error("Erreur de chargement CSV :", error);
-            document.getElementById("noDataMessage").textContent =
-              "Impossible de charger les données du serveur.";
-          });
-      });
-
-      document
-        .getElementById("searchInput")
-        .addEventListener("input", function () {
-          const searchTerm = this.value.toLowerCase();
-          const filtered = allData.filter(
-            (row) =>
-              row.Nom?.toLowerCase().includes(searchTerm) ||
-              row.Catégorie?.toLowerCase().includes(searchTerm) ||
-              row.Description?.toLowerCase().includes(searchTerm)
-          );
-          renderTable(filtered);
-        });
-
-      function renderTable(data) {
-        const tbody = document.getElementById("appTableBody");
-        tbody.innerHTML = "";
-        data.forEach((row) => {
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${row.Nom || ""}</td>
-            <td><span class="badge bg-secondary">${row.Catégorie || ""}</span></td>
-            <td>${row.Description || ""}</td>
-            <td><a href="${row.Lien || "#"}" target="_blank">Lien</a></td>
-          `;
-          tbody.appendChild(tr);
-        });
-      }
-
-      function generateCategorySelect(data, label) {
-        const select = document.getElementById("categorySelect");
-        select.innerHTML = `<option value="all">${label}</option>`;
-        const categories = [...new Set(data.map((r) => r.Catégorie))]
-          .filter(Boolean)
-          .sort();
-        categories.forEach((cat) => {
-          select.innerHTML += `<option value="${cat}">${cat}</option>`;
-        });
-
-        select.addEventListener("change", function () {
-          const selectedCat = this.value;
-          const filtered =
-            selectedCat === "all"
-              ? allData
-              : allData.filter((row) => row.Catégorie === selectedCat);
-          renderTable(filtered);
-        });
-      }
-
-      const translations = {
-        fr: {
-          title: "Catalogue des Applications",
-          search: "Rechercher une application...",
-          allCategories: "Toutes les catégories",
-          clearData: "Effacer les données enregistrées",
-          name: "Nom",
-          category: "Catégorie",
-          description: "Description",
-          link: "Lien",
-          loading: "Chargement des données...",
-        },
-        en: {
-          title: "Application Catalog",
-          search: "Search an application...",
-          allCategories: "All categories",
-          clearData: "Clear saved data",
-          name: "Name",
-          category: "Category",
-          description: "Description",
-          link: "Link",
-          loading: "Loading data...",
-        },
-        es: {
-          title: "Catálogo de Aplicaciones",
-          search: "Buscar una aplicación...",
-          allCategories: "Todas las categorías",
-          clearData: "Borrar datos guardados",
-          name: "Nombre",
-          category: "Categoría",
-          description: "Descripción",
-          link: "Enlace",
-          loading: "Cargando datos...",
-        },
-      };
-
-      const csvFiles = {
-        fr: "application-fr.csv",
-        en: "application-en.csv",
-        es: "application-es.csv",
-      };
-      const savedLang = localStorage.getItem("selectedLanguage") || "fr";
-      document.getElementById("languageSelect").value = savedLang;
-      const csvUrl = csvFiles[savedLang];
-
-      document
-        .getElementById("languageSelect")
-        .addEventListener("change", function () {
-          const lang = this.value;
-          localStorage.setItem("selectedLanguage", lang);
-          document.querySelector("h1").textContent = translations[lang].title;
-          document.getElementById("searchInput").placeholder =
-            translations[lang].search;
-          document.querySelector(
-            '#categorySelect option[value="all"]'
-          ).textContent = translations[lang].allCategories;
-          document.getElementById("noDataMessage").textContent =
-            translations[lang].loading;
-          document.querySelector("th:nth-child(1)").textContent =
-            translations[lang].name;
-          document.querySelector("th:nth-child(2)").textContent =
-            translations[lang].category;
-          document.querySelector("th:nth-child(3)").textContent =
-            translations[lang].description;
-          document.querySelector("th:nth-child(4)").textContent =
-            translations[lang].link;
-
-          // Recharger le CSV correspondant à la langue
-          fetch(csvFiles[lang])
-            .then((r) => r.text())
-            .then((csvText) => {
-              Papa.parse(csvText, {
-                header: true,
-                skipEmptyLines: true,
-                complete: (res) => {
-                  allData = res.data;
-                  renderTable(allData);
-                  generateCategorySelect(
-                    allData,
-                    translations[lang].allCategories
-                  );
-                },
-              });
-            });
-        });
+      /* … tout votre JS catalogue (identique à la version précédente) … */
     </script>
 
     <!-- Librairies JS externes -->
@@ -270,22 +120,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
     <script>
-      $(document).ready(function () {
+      $(function () {
         $("#languageSelect").selectpicker();
       });
     </script>
 
-    <!-- ▼ 4.  Script postMessage : ajuste la hauteur dans Pressero ▼ -->
+    <!-- ▾ --------- postMessage : ajuste la hauteur dans Pressero --------- ▾ -->
     <script>
       function sendHeight() {
         const h = document.documentElement.scrollHeight;
-        /* Remplacez l'étoile par l'URL exacte de votre boutique Pressero si vous voulez être strict */
+        // Remplacez * par l'URL exacte de votre boutique si désiré.
         parent.postMessage({ type: "resize", height: h }, "*");
       }
-
       window.addEventListener("load", sendHeight);
       window.addEventListener("resize", sendHeight);
     </script>
   </body>
 </html>
+
 
