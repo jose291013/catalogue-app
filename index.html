@@ -16,6 +16,15 @@
 
     img, video, iframe { max-width: 100%; height: auto; }
     table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; }
+    /* largeur “full‑width” pour le contenu */
+  .container{
+    width: min(95%, 1400px);   /* occupe 95 % de la fenêtre ; maxi 1 400 px */
+    margin-inline: auto;       /* centre le bloc */
+    padding: clamp(1rem, 3vw, 2rem);
+    display: grid;
+    gap: 2rem;
+  }
+</style>
   </style>
 </head>
 <body>
