@@ -1,298 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Catalogue des Applications</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogue des Applications</title>
 
-    <!-- ★ Librairies externes -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"
-    />
+  <!-- ▸ Styles & libs externes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
 
-    <style>
-      /* ▾ --------- Vos styles existants --------- ▾ */
-      .category-badge {
-        margin-right: 5px;
-      }
+  <style>
+    /* —— styles maison —— */
+    .category-badge { margin-right: 5px; }
 
-      /* ▾ --------- Ajouts responsive --------- ▾ */
-      img,
-      video,
-      iframe {
-        max-width: 100%;
-        height: auto;
-      }
+    img, video, iframe { max-width: 100%; height: auto; }
+    table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="mb-4">Catalogue des Applications</h1>
 
-      table {
-        display: block; /* garde la table scrollable sur mobile */
-        width: 100%;
-        overflow-x: auto;
-        border-collapse: collapse;
-      }
+    <!-- Sélecteur de langue -->
+    <select id="languageSelect" class="selectpicker mb-3" data-width="fit">
+      <option value="fr" data-content='<span class="fi fi-fr me-2"></span> Français'>Français</option>
+      <option value="en" data-content='<span class="fi fi-us me-2"></span> English'>English</option>
+      <option value="es" data-content='<span class="fi fi-es me-2"></span> Español'>Español</option>
+    </select>
 
-      /* ▾ --------- Wrapper Iframe (sans ratio) --------- ▾ */
-      .embed-app {
-        width: 100%;
-        /* Fallback si le postMessage n'arrive pas : min‑height 60vh */
-        min-height: 60vh;
-        position: relative;
-      }
-      .embed-app iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-    </style>
-  </head>
+    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Rechercher une application..." />
 
-  <body>
-    <!-- ▸ Votre contenu HTML (inchangé) ▸ -->
-    <div class="container my-5">
-      <h1 class="mb-4">Catalogue des Applications</h1>
-      <!-- SELECT LANGUE -->
-      <select id="languageSelect" class="selectpicker mb-3" data-width="fit">
-        <option
-          value="fr"
-          data-content='<span class="fi fi-fr me-2"></span> Français'
-          >Français</option
-        >
-        <option
-          value="en"
-          data-content='<span class="fi fi-us me-2"></span> English'
-          >English</option
-        >
-        <option
-          value="es"
-          data-content='<span class="fi fi-es me-2"></span> Español'
-          >Español</option
-        >
-      </select>
+    <select id="categorySelect" class="form-select mb-3">
+      <option value="all">Toutes les catégories</option>
+    </select>
 
-      <input
-        type="text"
-        id="searchInput"
-        class="form-control mb-3"
-        placeholder="Rechercher une application..."
-      />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th><th>Catégorie</th><th>Description</th><th>Lien</th>
+        </tr>
+      </thead>
+      <tbody id="appTableBody"></tbody>
+    </table>
+    <p id="noDataMessage" class="text-muted">Chargement des données...</p>
+  </div>
 
-      <select id="categorySelect" class="form-select mb-3">
-        <option value="all">Toutes les catégories</option>
-      </select>
+  <!-- ▸ Librairie CSV -->
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Catégorie</th>
-            <th>Description</th>
-            <th>Lien</th>
-          </tr>
-        </thead>
-        <tbody id="appTableBody"></tbody>
-      </table>
-      <p id="noDataMessage" class="text-muted">Chargement des données...</p>
-    </div>
-
-    <!-- ▸ Iframe affichée dans Pressero (vous pouvez supprimer cette div ici si elle est déjà côté Pressero) ▸ -->
-    <div class="embed-app d-none" id="localPreview">
-      <!-- d-none : sert juste de prévisualisation locale, pas nécessaire en production -->
-      <iframe src="https://jose291013.github.io/catalogue-app/" title="Démo"></iframe>
-    </div>
-
-    <!-- ▾ --------- Scripts métier (inchangés) --------- ▾ -->
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<!-- ★ Script principal (ordre corrigé) → csvUrl défini AVANT le fetch -->
-<script>
-  /* 1.  Localisation des CSV + langue par défaut */
-  /* 1.  Chemins CSV (absolus) + langue par défaut */
-  const basePath = "/catalogue-app/";  // garantit le bon dossier même sans slash final dans l'URL
-  const csvFiles = {
-    fr: basePath + "application-fr.csv",
-    en: basePath + "application-en.csv",
-    es: basePath + "application-es.csv",
-  };
-  const savedLang = localStorage.getItem("selectedLanguage") || "fr";
-  let currentLang = savedLang;  // on la mettra à jour quand l'utilisateur change
-  let csvUrl = csvFiles[currentLang];
-  const savedLang = localStorage.getItem("selectedLanguage") || "fr";
-  const csvUrl = csvFiles[savedLang];
-  document.addEventListener("DOMContentLoaded", init);
-
-  /* 2.  Variables globales */
-  let allData = [];
-  const translations = {
-    fr: {
-      title: "Catalogue des Applications",
-      search: "Rechercher une application...",
-      allCategories: "Toutes les catégories",
-      clearData: "Effacer les données enregistrées",
-      name: "Nom",
-      category: "Catégorie",
-      description: "Description",
-      link: "Lien",
-      loading: "Chargement des données...",
-    },
-    en: {
-      title: "Application Catalog",
-      search: "Search an application...",
-      allCategories: "All categories",
-      clearData: "Clear saved data",
-      name: "Name",
-      category: "Category",
-      description: "Description",
-      link: "Link",
-      loading: "Loading data...",
-    },
-    es: {
-      title: "Catálogo de Aplicaciones",
-      search: "Buscar una aplicación...",
-      allCategories: "Todas las categorías",
-      clearData: "Borrar datos guardados",
-      name: "Nombre",
-      category: "Categoría",
-      description: "Descripción",
-      link: "Enlace",
-      loading: "Cargando datos...",
-    },
-  };
-
-  /* 3.  Fonction d'initialisation */
-  function init() {
-    // Applique la langue initiale
-    document.getElementById("languageSelect").value = savedLang;
-    setLang(savedLang);
-
-    // Charge le CSV initial
-    loadCsv(csvUrl);
-
-    // Ecoute le champ de recherche et le select catégorie
-    document.getElementById("searchInput").addEventListener("input", filterTable);
-
-    // Langues
-    document.getElementById("languageSelect").addEventListener("change", (e) => {
-      const lang = e.target.value;
-      localStorage.setItem("selectedLanguage", lang);
-      setLang(lang);
-      currentLang = lang;
-      csvUrl = csvFiles[lang];
-      loadCsv(csvUrl);
-    });
-  }
-
-  /* 4.  Chargement CSV */
-  function loadCsv(url) {
-    document.getElementById("noDataMessage").textContent = translations[currentLang].loading;
-    fetch(url)
-      .then((r) => {
-        if (!r.ok) throw new Error("CSV introuvable : " + url);
-        return r.text();
-      })
-      .then((csvText) => {
-        Papa.parse(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (res) => {
-            allData = res.data;
-            renderTable(allData);
-            generateCategorySelect(allData, translations[currentLang].allCategories);
-            document.getElementById("noDataMessage").style.display = "none";
-          },
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-        document.getElementById("noDataMessage").textContent = err.message;
-      });
-  }
-
-  /* 5.  Table + filtres */
-  function renderTable(data) {
-    const tbody = document.getElementById("appTableBody");
-    tbody.innerHTML = "";
-    data.forEach((row) => {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${row.Nom || ""}</td>
-        <td><span class="badge bg-secondary">${row.Catégorie || ""}</span></td>
-        <td>${row.Description || ""}</td>
-        <td><a href="${row.Lien || "#"}" target="_blank">Lien</a></td>
-      `;
-      tbody.appendChild(tr);
-    });
-  }
-
-  function filterTable() {
-    const term = this.value.toLowerCase();
-    const filtered = allData.filter(
-      (row) =>
-        row.Nom?.toLowerCase().includes(term) ||
-        row.Catégorie?.toLowerCase().includes(term) ||
-        row.Description?.toLowerCase().includes(term)
-    );
-    renderTable(filtered);
-  }
-
-  function generateCategorySelect(data, label) {
-    const select = document.getElementById("categorySelect");
-    select.innerHTML = `<option value="all">${label}</option>`;
-    [...new Set(data.map((r) => r.Catégorie).filter(Boolean).sort())].forEach((cat) => {
-      select.innerHTML += `<option value="${cat}">${cat}</option>`;
-    });
-    select.onchange = function () {
-      const sel = this.value;
-      const filtered = sel === "all" ? allData : allData.filter((r) => r.Catégorie === sel);
-      renderTable(filtered);
+  <script>
+    /* ======== Config ======== */
+    const basePath = "/catalogue-app/"; // dossier où se trouvent index.html + CSV
+    const csvFiles = {
+      fr: basePath + "application-fr.csv",
+      en: basePath + "application-en.csv",
+      es: basePath + "application-es.csv",
     };
-  }
+    const translations = {
+      fr: { title:"Catalogue des Applications", search:"Rechercher une application...", allCategories:"Toutes les catégories", name:"Nom", category:"Catégorie", description:"Description", link:"Lien", loading:"Chargement des données..."},
+      en: { title:"Application Catalog", search:"Search an application...", allCategories:"All categories", name:"Name", category:"Category", description:"Description", link:"Link", loading:"Loading data..."},
+      es: { title:"Catálogo de Aplicaciones", search:"Buscar una aplicación...", allCategories:"Todas las categorías", name:"Nombre", category:"Categoría", description:"Descripción", link:"Enlace", loading:"Cargando datos..."}
+    };
 
-  /* 6.  Traductions UI */
-  function setLang(lang) {
-    document.querySelector("h1").textContent = translations[lang].title;
-    document.getElementById("searchInput").placeholder = translations[lang].search;
-    document.querySelector('#categorySelect option[value="all"]').textContent = translations[lang].allCategories;
-    document.getElementById("noDataMessage").textContent = translations[lang].loading;
-    document.querySelector("th:nth-child(1)").textContent = translations[lang].name;
-    document.querySelector("th:nth-child(2)").textContent = translations[lang].category;
-    document.querySelector("th:nth-child(3)").textContent = translations[lang].description;
-    document.querySelector("th:nth-child(4)").textContent = translations[lang].link;
-  }
-</script>
-    <script>
-      /* … tout votre JS catalogue (identique à la version précédente) … */
-    </script>
+    /* ======== Variables ======== */
+    let currentLang = localStorage.getItem("selectedLanguage") || "fr";
+    let allData = [];
 
-    <!-- Librairies JS externes -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
-    <script>
-      $(function () {
-        $("#languageSelect").selectpicker();
+    /* ======== Initialisation ======== */
+    document.addEventListener("DOMContentLoaded", () => {
+      // UI initiale
+      document.getElementById("languageSelect").value = currentLang;
+      applyTranslations();
+      loadCsv(csvFiles[currentLang]);
+
+      // Listeners
+      document.getElementById("searchInput").addEventListener("input", (e) => filterTable(e.target.value));
+      document.getElementById("languageSelect").addEventListener("change", (e) => {
+        currentLang = e.target.value;
+        localStorage.setItem("selectedLanguage", currentLang);
+        applyTranslations();
+        loadCsv(csvFiles[currentLang]);
       });
-    </script>
+    });
 
-    <!-- ▾ --------- postMessage : ajuste la hauteur dans Pressero --------- ▾ -->
-    <script>
-      function sendHeight() {
-        const h = document.documentElement.scrollHeight;
-        // Remplacez * par l'URL exacte de votre boutique si désiré.
-        parent.postMessage({ type: "resize", height: h }, "*");
-      }
-      window.addEventListener("load", sendHeight);
-      window.addEventListener("resize", sendHeight);
-    </script>
-  </body>
+    /* ======== Fonctions ======== */
+    function applyTranslations() {
+      const t = translations[currentLang];
+      document.querySelector("h1").textContent = t.title;
+      document.getElementById("searchInput").placeholder = t.search;
+      document.querySelector('#categorySelect option[value="all"]').textContent = t.allCategories;
+      document.getElementById("noDataMessage").textContent = t.loading;
+      const th = document.querySelectorAll("thead th");
+      th[0].textContent = t.name; th[1].textContent = t.category; th[2].textContent = t.description; th[3].textContent = t.link;
+    }
+
+    function loadCsv(url) {
+      document.getElementById("noDataMessage").style.display = "";
+      document.getElementById("noDataMessage").textContent = translations[currentLang].loading;
+      fetch(url)
+        .then(r => { if(!r.ok) throw new Error("CSV introuvable: "+url); return r.text(); })
+        .then(text => Papa.parse(text, {header:true, skipEmptyLines:true, complete: res => {
+          allData = res.data;
+          renderTable(allData);
+          populateCategories();
+          document.getElementById("noDataMessage").style.display = "none";
+        }}))
+        .catch(err => { console.error(err); document.getElementById("noDataMessage").textContent = err.message; });
+    }
+
+    function renderTable(data) {
+      const tbody = document.getElementById("appTableBody");
+      tbody.innerHTML = "";
+      data.forEach(row => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${row.Nom||""}</td><td><span class="badge bg-secondary">${row.Catégorie||""}</span></td><td>${row.Description||""}</td><td><a href="${row.Lien||"#"}" target="_blank">Lien</a></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterTable(term) {
+      term = term.toLowerCase();
+      const filtered = allData.filter(r => (r.Nom||"").toLowerCase().includes(term) || (r.Catégorie||"").toLowerCase().includes(term) || (r.Description||"").toLowerCase().includes(term));
+      renderTable(filtered);
+    }
+
+    function populateCategories() {
+      const select = document.getElementById("categorySelect");
+      const t = translations[currentLang];
+      select.innerHTML = `<option value="all">${t.allCategories}</option>`;
+      [...new Set(allData.map(r => r.Catégorie).filter(Boolean).sort())].forEach(cat => {
+        const opt = document.createElement("option"); opt.value = cat; opt.textContent = cat; select.appendChild(opt);
+      });
+      select.onchange = () => {
+        const v = select.value;
+        renderTable(v === "all" ? allData : allData.filter(r => r.Catégorie === v));
+      };
+    }
+  </script>
+
+  <!-- ▸ JS externes -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
+  <script>$(function(){ $('#languageSelect').selectpicker(); });</script>
+</body>
 </html>
+
 
 
 
