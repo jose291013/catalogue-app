@@ -5,82 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Catalogue des Applications</title>
 
-    <!-- ▸ Styles & libs externes -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css"
-    />
+    <!-- ► Librairies CSS externes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
 
     <style>
-      /* --- styles maison --- */
-      body {
-        margin: 0; /* enlève la marge par défaut du body */
+      /* —— RESET MARGES —— */
+      html,body{margin:0;padding:0}
+
+      /* —— Conteneur plein‑écran —— */
+      .main-wrap{
+        width:100%;                /* aucune marge horizontale */
+        padding:1.5rem 0 3rem;     /* petit espace haut/bas */
+        max-width:1600px;          /* limite sur écrans très larges */
+        margin-inline:auto;        /* centre si max-width atteint */
       }
 
-      /* Conteneur plein écran sans marge horizontale */
-      .main-wrap {
-        width: 100%;
-        padding: 1.5rem 2rem; /* haut‑bas 1.5rem, côtés 2rem */
-      }
+      /* —— Badges catégorie —— */
+      .category-badge{margin-right:5px}
 
-      /* Badges catégorie */
-      .category-badge {
-        margin-right: 5px;
-      }
-
-      img,
-      video,
-      iframe {
-        max-width: 100%;
-        height: auto;
-      }
-
-      table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        border-collapse: collapse;
-      }
+      /* —— Table responsive —— */
+      table{display:block;width:100%;overflow-x:auto;border-collapse:collapse}
+      img,video{max-width:100%;height:auto}
     </style>
   </head>
-
   <body>
-    <div class="main-wrap">
-      <h1 class="mb-4">Catalogue des Applications</h1>
+    <div class="main-wrap px-3 px-md-4"> <!-- padding latéral 12‑16px -->
+      <h1 class="mb-4 fw-semibold">Catalogue des Applications</h1>
 
       <!-- Sélecteur de langue -->
       <select id="languageSelect" class="selectpicker mb-3" data-width="fit">
-        <option
-          value="fr"
-          data-content='<span class="fi fi-fr me-2"></span> Français'>
-          Français
-        </option>
-        <option
-          value="en"
-          data-content='<span class="fi fi-us me-2"></span> English'>
-          English
-        </option>
-        <option
-          value="es"
-          data-content='<span class="fi fi-es me-2"></span> Español'>
-          Español
-        </option>
+        <option value="fr" data-content='<span class="fi fi-fr me-2"></span> Français'>Français</option>
+        <option value="en" data-content='<span class="fi fi-us me-2"></span> English'>English</option>
+        <option value="es" data-content='<span class="fi fi-es me-2"></span> Español'>Español</option>
       </select>
 
-      <input
-        type="text"
-        id="searchInput"
-        class="form-control mb-3"
-        placeholder="Rechercher une application..."
-      />
+      <input id="searchInput" class="form-control mb-3" placeholder="Rechercher une application…" />
 
       <select id="categorySelect" class="form-select mb-3">
         <option value="all">Toutes les catégories</option>
@@ -88,174 +49,112 @@
 
       <table class="table table-striped">
         <thead>
-          <tr>
-            <th>Nom</th>
-            <th>Catégorie</th>
-            <th>Description</th>
-            <th>Lien</th>
-          </tr>
+          <tr><th>Nom</th><th>Catégorie</th><th>Description</th><th>Lien</th></tr>
         </thead>
         <tbody id="appTableBody"></tbody>
       </table>
-      <p id="noDataMessage" class="text-muted">Chargement des données...</p>
+      <p id="noDataMessage" class="text-muted">Chargement des données…</p>
     </div>
 
-    <!-- ▸ Librairie CSV -->
+    <!-- ► Librairie CSV -->
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
 
     <script>
-      /* ======== Config ======== */
-      const basePath = "/catalogue-app/"; // dossier où se trouvent index.html + CSV
+      /* ==================== CONFIG ==================== */
+      const basePath = "/catalogue-app/";            // dossier GitHub Pages
       const csvFiles = {
         fr: basePath + "application-fr.csv",
         en: basePath + "application-en.csv",
         es: basePath + "application-es.csv",
       };
       const translations = {
-        fr: {
-          title: "Catalogue des Applications",
-          search: "Rechercher une application...",
-          allCategories: "Toutes les catégories",
-          name: "Nom",
-          category: "Catégorie",
-          description: "Description",
-          link: "Lien",
-          loading: "Chargement des données...",
-        },
-        en: {
-          title: "Application Catalog",
-          search: "Search an application...",
-          allCategories: "All categories",
-          name: "Name",
-          category: "Category",
-          description: "Description",
-          link: "Link",
-          loading: "Loading data...",
-        },
-        es: {
-          title: "Catálogo de Aplicaciones",
-          search: "Buscar una aplicación...",
-          allCategories: "Todas las categorías",
-          name: "Nombre",
-          category: "Categoría",
-          description: "Descripción",
-          link: "Enlace",
-          loading: "Cargando datos...",
-        },
+        fr:{title:"Catalogue des Applications",search:"Rechercher une application…",allCategories:"Toutes les catégories",name:"Nom",category:"Catégorie",description:"Description",link:"Lien",loading:"Chargement des données…"},
+        en:{title:"Application Catalog",search:"Search an application…",allCategories:"All categories",name:"Name",category:"Category",description:"Description",link:"Link",loading:"Loading data…"},
+        es:{title:"Catálogo de Aplicaciones",search:"Buscar una aplicación…",allCategories:"Todas las categorías",name:"Nombre",category:"Categoría",description:"Descripción",link:"Enlace",loading:"Cargando datos…"}
       };
 
-      /* ======== Variables ======== */
+      /* ==================== VARIABLES ==================== */
       let currentLang = localStorage.getItem("selectedLanguage") || "fr";
       let allData = [];
 
-      /* ======== Initialisation ======== */
-      document.addEventListener("DOMContentLoaded", () => {
+      /* ==================== INIT ==================== */
+      document.addEventListener("DOMContentLoaded", ()=>{
         document.getElementById("languageSelect").value = currentLang;
         applyTranslations();
         loadCsv(csvFiles[currentLang]);
 
-        document
-          .getElementById("searchInput")
-          .addEventListener("input", (e) => filterTable(e.target.value));
-        document
-          .getElementById("languageSelect")
-          .addEventListener("change", (e) => {
-            currentLang = e.target.value;
-            localStorage.setItem("selectedLanguage", currentLang);
-            applyTranslations();
-            loadCsv(csvFiles[currentLang]);
-          });
+        document.getElementById("searchInput").addEventListener("input", e=>filterTable(e.target.value));
+        document.getElementById("languageSelect").addEventListener("change", e=>{
+          currentLang = e.target.value;
+          localStorage.setItem("selectedLanguage",currentLang);
+          applyTranslations();
+          loadCsv(csvFiles[currentLang]);
+        });
       });
 
-      /* ======== Fonctions ======== */
-      function applyTranslations() {
+      /* ==================== FONCTIONS ==================== */
+      function applyTranslations(){
         const t = translations[currentLang];
         document.querySelector("h1").textContent = t.title;
         document.getElementById("searchInput").placeholder = t.search;
-        document.querySelector('#categorySelect option[value="all"]').textContent =
-          t.allCategories;
+        document.querySelector('#categorySelect option[value="all"]').textContent = t.allCategories;
         document.getElementById("noDataMessage").textContent = t.loading;
         const th = document.querySelectorAll("thead th");
-        th[0].textContent = t.name;
-        th[1].textContent = t.category;
-        th[2].textContent = t.description;
-        th[3].textContent = t.link;
+        [t.name,t.category,t.description,t.link].forEach((txt,i)=>th[i].textContent=txt);
       }
 
-      function loadCsv(url) {
-        document.getElementById("noDataMessage").style.display = "";
-        document.getElementById("noDataMessage").textContent =
-          translations[currentLang].loading;
+      function loadCsv(url){
+        document.getElementById("noDataMessage").style.display="";
+        document.getElementById("noDataMessage").textContent = translations[currentLang].loading;
         fetch(url)
-          .then((r) => {
-            if (!r.ok) throw new Error("CSV introuvable: " + url);
-            return r.text();
-          })
-          .then((text) =>
-            Papa.parse(text, {
-              header: true,
-              skipEmptyLines: true,
-              complete: (res) => {
-                allData = res.data;
-                renderTable(allData);
-                populateCategories();
-                document.getElementById("noDataMessage").style.display = "none";
-              },
-            })
-          )
-          .catch((err) => {
-            console.error(err);
-            document.getElementById("noDataMessage").textContent = err.message;
-          });
+          .then(r=>{if(!r.ok)throw new Error("CSV introuvable: "+url);return r.text();})
+          .then(txt=>Papa.parse(txt,{header:true,skipEmptyLines:true,complete:res=>{
+            allData = res.data;
+            renderTable(allData);
+            populateCategories();
+            document.getElementById("noDataMessage").style.display="none";
+          }}))
+          .catch(err=>{console.error(err);document.getElementById("noDataMessage").textContent=err.message;});
       }
 
-      function renderTable(data) {
+      function renderTable(data){
         const tbody = document.getElementById("appTableBody");
-        tbody.innerHTML = "";
-        data.forEach((row) => {
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${row.Nom || ""}</td>
-            <td><span class="badge bg-secondary">${row.Catégorie || ""}</span></td>
-            <td>${row.Description || ""}</td>
-            <td><a href="${row.Lien || "#"}" target="_blank">Lien</a></td>
-          `;
+        tbody.innerHTML="";
+        data.forEach(row=>{
+          const tr=document.createElement("tr");
+          tr.innerHTML=`<td>${row.Nom||""}</td><td><span class="badge bg-secondary">${row.Catégorie||""}</span></td><td>${row.Description||""}</td><td><a href="${row.Lien||"#"}" target="_blank">Lien</a></td>`;
           tbody.appendChild(tr);
         });
-        if (typeof parent !== "undefined" && parent.postMessage) {
-          parent.postMessage(
-            { type: "resize", height: document.documentElement.scrollHeight },
-            "*"
-          );
-        }
+        // Informe le parent que la hauteur a changé
+        if(parent?.postMessage){parent.postMessage({type:"resize",height:document.documentElement.scrollHeight},"*");}
       }
 
-      function filterTable(term) {
+      function filterTable(term){
         term = term.toLowerCase();
-        const filtered = allData.filter(
-          (r) =>
-            (r.Nom || "").toLowerCase().includes(term) ||
-            (r.Catégorie || "").toLowerCase().includes(term) ||
-            (r.Description || "").toLowerCase().includes(term)
-        );
-        renderTable(filtered);
+        renderTable(allData.filter(r=>[r.Nom,r.Catégorie,r.Description].some(v=>(v||"").toLowerCase().includes(term))));
       }
 
-      function populateCategories() {
-        const select = document.getElementById("categorySelect");
-        const t = translations[currentLang];
-        select.innerHTML = `<option value="all">${t.allCategories}</option>`;
-        [...new Set(allData.map((r) => r.Catégorie).filter(Boolean).sort())].forEach(
-          (cat) => {
-            const opt = document.createElement("option");
-            opt.value = cat;
-            opt.textContent = cat;
-            select.appendChild(opt);
-          }
-        );
-        select.onchange = () => {
-          const v = select.value;
-          renderTable(v === "all" ? allData : all
+      function populateCategories(){
+        const select=document.getElementById("categorySelect");
+        const t=translations[currentLang];
+        select.innerHTML=`<option value="all">${t.allCategories}</option>`;
+        [...new Set(allData.map(r=>r.Catégorie).filter(Boolean).sort())].forEach(cat=>{
+          const opt=new Option(cat,cat);select.appendChild(opt);
+        });
+        select.onchange=()=>{
+          const v=select.value;
+          renderTable(v==="all"?allData:allData.filter(r=>r.Catégorie===v));
+        };
+      }
+    </script>
+
+    <!-- ► Librairies JS externes -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
+    <script>$(function(){$('#languageSelect').selectpicker();});</script>
+  </body>
+</html>
 
 
 
