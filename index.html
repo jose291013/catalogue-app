@@ -112,11 +112,20 @@
     function renderTable(data) {
       const tbody = document.getElementById("appTableBody");
       tbody.innerHTML = "";
-      data.forEach(row => {
+      data.forEach((row) => {
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${row.Nom||""}</td><td><span class="badge bg-secondary">${row.Catégorie||""}</span></td><td>${row.Description||""}</td><td><a href="${row.Lien||"#"}" target="_blank">Lien</a></td>`;
+        tr.innerHTML = `
+          <td>${row.Nom || ""}</td>
+          <td><span class="badge bg-secondary">${row.Catégorie || ""}</span></td>
+          <td>${row.Description || ""}</td>
+          <td><a href="${row.Lien || "#"}" target="_blank">Lien</a></td>
+        `;
         tbody.appendChild(tr);
       });
+      /* ↻ Informe le parent que la hauteur vient de changer */
+      if (typeof parent !== "undefined" && parent.postMessage) {
+        parent.postMessage({ type: "resize", height: document.documentElement.scrollHeight }, "*");
+      }
     }
 
     function filterTable(term) {
@@ -146,6 +155,7 @@
   <script>$(function(){ $('#languageSelect').selectpicker(); });</script>
 </body>
 </html>
+
 
 
 
